@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dimitriskatsikas.mathtools"
+    android:installLocation="auto" >
+    <!-- Required permission to check licensing. -->
+    <!--<uses-permission android:name="com.android.vending.CHECK_LICENSE" />-->
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/CustomActionBarMaterialTheme3" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".FactorialsCombinationsActivity"
+            android:label="@string/title_activity_factorials_combinations"
+            android:parentActivityName=".MainActivity"
+
+            android:theme="@style/CustomActionBarMaterialTheme1"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.dimitriskatsikas.mathtools.MainActivity" />
+        </activity>
+        <activity
+            android:name=".VolumesSurfaces"
+            android:label="@string/title_activity_volumes_surfaces"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/CustomActionBarMaterialTheme2" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.dimitriskatsikas.mathtools.MainActivity" />
+        </activity>
+        <activity
+            android:name=".TwoDimensionalShapesActivity"
+            android:label="@string/title_activity_two_dimensional_shapes"
+            android:parentActivityName=".VolumesSurfaces"
+            android:theme="@style/CustomActionBarMaterialTheme2"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.dimitriskatsikas.mathtools.VolumesSurfaces" />
+        </activity>
+        <activity
+            android:name=".ThreeDimensionalShapesActivity"
+            android:label="@string/title_activity_three_dimensional_shapes"
+            android:parentActivityName=".VolumesSurfaces"
+            android:theme="@style/CustomActionBarMaterialTheme2"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.dimitriskatsikas.mathtools.VolumesSurfaces" />
+        </activity>
+        <activity
+            android:name=".AboutActivity"
+            android:label="@string/title_activity_about"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.dimitriskatsikas.mathtools.MainActivity" />
+        </activity>
+        <activity
+            android:name=".NumbersActivity"
+            android:label="@string/title_activity_numbers"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/CustomActionBarMaterialTheme4"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.dimitriskatsikas.mathtools.MainActivity" />
+        </activity>
+
+        <provider
+            android:authorities="com.dimitriskatsikas.mathtools.data.provider"
+            android:name=".data.AboutContentProvider"
+            android:exported="false">
+        </provider>
+
+    </application>
+
+</manifest>

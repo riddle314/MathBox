@@ -1,0 +1,58 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+
+
+    <style name="CustomActionBarMaterialTheme1"
+        parent="@style/Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/orange_dark</item>
+        <item name="colorPrimaryDark">@color/orange_notification_bar</item>
+        <item name="colorAccent">@color/orange_dark</item>
+        <item name="colorControlNormal">@color/colorControlNormal</item>
+    </style>
+
+
+    <style name="CustomActionBarMaterialTheme2"
+        parent="@style/Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/holo_green_dark</item>
+        <item name="colorPrimaryDark">@color/green_notification_bar</item>
+        <item name="colorAccent">@color/holo_green_dark</item>
+        <item name="colorControlNormal">@color/colorControlNormal</item>
+    </style>
+
+
+
+    <style name="CustomActionBarMaterialTheme3"
+        parent="@style/Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/bar_black</item>
+        <item name="colorPrimaryDark">@color/black_notification_bar</item>
+    </style>
+
+
+    <style name="CustomActionBarMaterialTheme4"
+        parent="@style/Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorPrimaryDark">@color/blue_notification_bar</item>
+        <item name="colorAccent">@color/blue</item>
+        <item name="colorControlNormal">@color/colorControlNormal</item>
+    </style>
+
+
+
+</resources>

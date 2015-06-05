@@ -1,0 +1,2487 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/lightgrey"
+    tools:context="com.dimitriskatsikas.mathtools.ThreeDimensionalShapesActivity" >
+    
+     <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin">
+
+         <android.support.v7.widget.CardView
+             xmlns:card_view="http://schemas.android.com/apk/res-auto"
+             card_view:cardBackgroundColor="@color/holo_green_dark"
+             card_view:cardElevation="2dp"
+             card_view:cardCornerRadius="2dp"
+             card_view:cardPreventCornerOverlap="false"
+             card_view:cardUseCompatPadding="true"
+             card_view:contentPaddingRight="-2.5dp"
+             card_view:contentPaddingLeft="-2.5dp"
+             card_view:contentPaddingTop="6dp"
+             card_view:contentPaddingBottom="-4dp"
+             android:id="@+id/upBorder1"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_centerHorizontal="true"
+             android:layout_marginTop="10dp" >
+
+         <android.support.v7.widget.CardView
+             xmlns:card_view="http://schemas.android.com/apk/res-auto"
+             card_view:cardBackgroundColor="@color/white_grey"
+             card_view:cardElevation="0dp"
+             card_view:cardCornerRadius="2dp"
+             card_view:cardPreventCornerOverlap="false"
+             card_view:cardUseCompatPadding="true"
+             card_view:contentPaddingRight="0dp"
+             card_view:contentPaddingLeft="0dp"
+             card_view:contentPaddingTop="0dp"
+             card_view:contentPaddingBottom="2dp"
+             android:id="@+id/downBorder1"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_centerHorizontal="true" >
+
+          <RelativeLayout
+              android:id="@+id/relativeLayout1"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_centerHorizontal="true"
+              android:background="@color/white_grey"
+              android:paddingLeft="7dp"
+              android:paddingRight="7dp" >
+
+              <TextView
+                  android:id="@+id/Sphere"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentTop="true"
+                  android:layout_centerHorizontal="true"
+                  android:layout_marginTop="7dp"
+                  android:text="Sphere"
+                  android:textColor="@color/holo_green_dark"
+                  android:textSize="20sp"
+                  android:textStyle="bold" />
+
+              <TextView
+                  android:id="@+id/textSphere2"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/textSphere1"
+                  android:layout_centerHorizontal="true"
+                  android:gravity="center"
+                  android:text="Volume = 4/3 × π × r^3"
+                  android:textColor="@color/grey"
+                  android:textStyle="bold"
+                  android:textSize="17sp"  />
+
+              <TextView
+                  android:id="@+id/textSphere1"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/imageSphere"
+                  android:layout_centerHorizontal="true"
+                  android:gravity="center"
+                  android:layout_marginTop="12dp"
+                  android:text="Surface Area = 4 × π × r²"
+                  android:textColor="@color/grey"
+                  android:textStyle="bold"
+                  android:textSize="17sp"  />
+
+              <TextView
+                  android:id="@+id/textSphere3"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/textSphere2"
+                  android:layout_centerHorizontal="true"
+                  android:text="π = 3.14159..."
+                  android:gravity="center"
+                  android:textColor="@color/grey"
+                  android:textStyle="bold"
+                  android:textSize="17sp"  />
+
+              <Button
+                  android:id="@+id/buttonSphere"
+                  android:layout_width="210dp"
+                  android:layout_height="46dp"
+                  android:background="@drawable/button_custom"
+                  android:textColor="@drawable/button_color_text"
+                  android:layout_below="@+id/editSphere1"
+                  android:layout_centerHorizontal="true"
+                  android:textAllCaps="false"
+                  android:text="Calculate"
+                  android:textStyle="bold"
+                  android:textSize="17sp"
+                  android:onClick="calculate1"/>
+              
+              <EditText
+                  android:id="@+id/editSphere1"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/textSphere4"
+                  android:layout_alignLeft="@+id/buttonSphere"
+                  android:layout_alignRight="@+id/buttonSphere"
+                  android:hint="Write number r"
+                  android:ems="10"
+                  android:inputType="numberDecimal" 
+                  android:textSize="15sp"
+                  android:textStyle="italic"
+                  android:textColor="@color/grey"
+                  android:textColorHint="@color/hintcolor"
+                  android:gravity="center" />
+              
+              <TextView
+                  android:id="@+id/textSphere5"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/buttonSphere"
+                  android:layout_centerHorizontal="true"
+                  android:layout_marginTop="6dp"
+                  android:textStyle="bold"
+                  android:textSize="17sp"
+                  android:gravity="center"
+                  android:textColor="@color/holo_green_dark"
+                  android:textIsSelectable="true"/>
+
+              <ImageView
+                  android:id="@+id/imageSphere"
+                  android:layout_width="wrap_content"
+                  android:layout_height="85dp"
+                  android:layout_marginTop="12dp"
+                  android:layout_below="@+id/Sphere"
+                  android:layout_centerHorizontal="true"
+                  android:src="@drawable/sphere" />
+
+              <TextView
+                  android:id="@+id/textSphere4"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_centerHorizontal="true"
+                  android:layout_below="@+id/textSphere3"
+                  android:text="r = radius"
+                  android:gravity="center"
+                  android:textColor="@color/grey"
+                  android:textStyle="bold"
+                  android:textSize="17sp"  />
+              
+              <Button
+                  android:id="@+id/ShareSphere"
+                  android:layout_width="60dp"
+                  android:layout_height="wrap_content"
+                  android:layout_alignBottom="@+id/buttonSphere"
+                  android:layout_alignTop="@+id/buttonSphere"
+                  android:layout_toRightOf="@+id/buttonSphere"
+                  android:background="@drawable/button_share2"
+                  android:onClick="share1" />
+
+              <ImageButton
+                  android:id="@+id/moreButton1"
+                  android:layout_width="30dp"
+                  android:layout_height="30dp"
+                  android:layout_alignParentRight="true"
+                  android:layout_below="@+id/textSphere5"
+                  android:layout_marginTop="4dp"
+                  android:layout_marginBottom="7dp"
+                  android:layout_marginRight="0dp"
+                  android:background="@drawable/button_more_green"
+                  android:onClick="moreButtonClick1" />
+
+           </RelativeLayout>
+         </android.support.v7.widget.CardView>
+         </android.support.v7.widget.CardView>
+
+         <android.support.v7.widget.CardView
+             xmlns:card_view="http://schemas.android.com/apk/res-auto"
+             card_view:cardBackgroundColor="@color/holo_green_dark"
+             card_view:cardElevation="2dp"
+             card_view:cardCornerRadius="2dp"
+             card_view:cardPreventCornerOverlap="false"
+             card_view:cardUseCompatPadding="true"
+             card_view:contentPaddingRight="-2.5dp"
+             card_view:contentPaddingLeft="-2.5dp"
+             card_view:contentPaddingTop="6dp"
+             card_view:contentPaddingBottom="-4dp"
+           android:id="@+id/upBorder2"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_below="@+id/upBorder1"
+           android:layout_centerHorizontal="true"
+           android:layout_marginTop="6dp" >
+
+         <android.support.v7.widget.CardView
+             xmlns:card_view="http://schemas.android.com/apk/res-auto"
+             card_view:cardBackgroundColor="@color/white_grey"
+             card_view:cardElevation="0dp"
+             card_view:cardCornerRadius="2dp"
+             card_view:cardPreventCornerOverlap="false"
+             card_view:cardUseCompatPadding="true"
+             card_view:contentPaddingRight="0dp"
+             card_view:contentPaddingLeft="0dp"
+             card_view:contentPaddingTop="0dp"
+             card_view:contentPaddingBottom="2dp"
+             android:id="@+id/downBorder2"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_centerHorizontal="true" >
+
+          <RelativeLayout
+              android:id="@+id/relativeLayout2"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_centerHorizontal="true"
+              android:background="@color/white_grey"
+              android:paddingLeft="7dp"
+              android:paddingRight="7dp" >
+
+              <TextView
+                  android:id="@+id/Torus"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentTop="true"
+                  android:layout_centerHorizontal="true"
+                  android:layout_marginTop="7dp"
+                  android:text="Torus"
+                  android:textColor="@color/holo_green_dark"
+                  android:textSize="20sp"
+                  android:textStyle="bold" />
+
+              <TextView
+                  android:id="@+id/textTorus2"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/textTorus1"
+                  android:layout_centerHorizontal="true"
+                  android:gravity="center"
+                  android:text="Volume = 2 × π² × R × r²"
+                  android:textColor="@color/grey"
+                  android:textStyle="bold"
+                  android:textSize="17sp"  />
+
+              <TextView
+                  android:id="@+id/textTorus1"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/imageTorus"
+                  android:layout_centerHorizontal="true"
+                  android:gravity="center"
+                  android:layout_marginTop="12dp"
+                  android:text="Surface Area =  4 × π² × R × r"
+                  android:textColor="@color/grey"
+                  android:textStyle="bold"
+                  android:textSize="17sp"  />
+
+              <TextView
+                  android:id="@+id/textTorus3"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/textTorus2"
+                  android:layout_centerHorizontal="true"
+                  android:gravity="center"
+                  android:text="π = 3.14159..."
+                  android:textColor="@color/grey"
+                  android:textStyle="bold"
+                  android:textSize="17sp"  />
+
+              <Button
+                  android:id="@+id/buttonTorus"
+                  android:layout_width="210dp"
+                  android:layout_height="46dp"
+                  android:background="@drawable/button_custom"
+                  android:textColor="@drawable/button_color_text"
+                  android:layout_below="@+id/editTorus2"
+                  android:layout_centerHorizontal="true"
+                  android:textAllCaps="false"
+                  android:text="Calculate"
+                  android:textStyle="bold"
+                  android:textSize="17sp"
+                  android:onClick="calculate2"/>
+              
+              <EditText
+                  android:id="@+id/editTorus1"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/textTorus5"
+                  android:layout_alignLeft="@+id/buttonTorus"
+                  android:layout_alignRight="@+id/buttonTorus"
+                  android:hint="Write number R"
+                  android:ems="10"
+                  android:inputType="numberDecimal" 
+                  android:textSize="15sp"
+                  android:textStyle="italic"
+                  android:textColor="@color/grey"
+                  android:textColorHint="@color/hintcolor"
+                  android:gravity="center"/>
+              
+              <EditText
+                  android:id="@+id/editTorus2"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/editTorus1"
+                  android:layout_alignLeft="@+id/buttonTorus"
+                  android:layout_alignRight="@+id/buttonTorus"
+                  android:hint="Write number r"
+                  android:ems="10"
+                  android:inputType="numberDecimal" 
+                  android:textSize="15sp"
+                  android:textStyle="italic"
+                  android:textColor="@color/grey"
+                  android:textColorHint="@color/hintcolor"
+                  android:gravity="center"/>
+              
+              <TextView
+                  android:id="@+id/textTorus6"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/buttonTorus"
+                  android:layout_centerHorizontal="true"
+                  android:layout_marginTop="6dp"
+                  android:textStyle="bold"
+                  android:textSize="17sp"
+                  android:gravity="center"
+                  android:textColor="@color/holo_green_dark"
+                  android:textIsSelectable="true"/>
+
+              <ImageButton
+                  android:id="@+id/moreButton2"
+                  android:layout_width="30dp"
+                  android:layout_height="30dp"
+                  android:layout_alignParentRight="true"
+                  android:layout_below="@+id/textTorus6"
+                  android:layout_marginTop="4dp"
+                  android:layout_marginBottom="7dp"
+                  android:layout_marginRight="0dp"
+                  android:background="@drawable/button_more_green"
+                  android:onClick="moreButtonClick2" />
+
+              <ImageView
+                  android:id="@+id/imageTorus"
+                  android:layout_width="wrap_content"
+                  android:layout_height="85dp"
+                  android:layout_marginTop="12dp"
+                  android:layout_below="@+id/Torus"
+                  android:layout_centerHorizontal="true"
+                  android:src="@drawable/torus" />
+
+              <TextView
+                  android:id="@+id/textTorus4"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignRight="@+id/editTorus1"
+                  android:layout_alignLeft="@+id/editTorus1"
+                  android:gravity="center"
+                  android:layout_below="@+id/textTorus3"
+                  android:text="R = the distance from the center of the tube to the center of the torus"
+                  android:textColor="@color/grey"
+                  android:textStyle="bold"
+                  android:textSize="17sp"  />
+              
+              <TextView
+                  android:id="@+id/textTorus5"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_centerHorizontal="true"
+                  android:gravity="center"
+                  android:layout_below="@+id/textTorus4"
+                  android:text="r = the radius of the tube"
+                  android:textColor="@color/grey"
+                  android:textStyle="bold"
+                  android:textSize="17sp"  />
+              
+              <Button
+                  android:id="@+id/ShareTorus"
+                  android:layout_width="60dp"
+                  android:layout_height="wrap_content"
+                  android:layout_alignBottom="@+id/buttonTorus"
+                  android:layout_alignTop="@+id/buttonTorus"
+                  android:layout_toRightOf="@+id/buttonTorus"
+                  android:background="@drawable/button_share2"
+                  android:onClick="share2" />
+
+           </RelativeLayout>
+         </android.support.v7.widget.CardView>
+         </android.support.v7.widget.CardView>
+
+         <android.support.v7.widget.CardView
+             xmlns:card_view="http://schemas.android.com/apk/res-auto"
+             card_view:cardBackgroundColor="@color/holo_green_dark"
+             card_view:cardElevation="2dp"
+             card_view:cardCornerRadius="2dp"
+             card_view:cardPreventCornerOverlap="false"
+             card_view:cardUseCompatPadding="true"
+             card_view:contentPaddingRight="-2.5dp"
+             card_view:contentPaddingLeft="-2.5dp"
+             card_view:contentPaddingTop="6dp"
+             card_view:contentPaddingBottom="-4dp"
+             android:id="@+id/upBorder3"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_below="@+id/upBorder2"
+             android:layout_centerHorizontal="true"
+             android:layout_marginTop="6dp" >
+
+         <android.support.v7.widget.CardView
+             xmlns:card_view="http://schemas.android.com/apk/res-auto"
+             card_view:cardBackgroundColor="@color/white_grey"
+             card_view:cardElevation="0dp"
+             card_view:cardCornerRadius="2dp"
+             card_view:cardPreventCornerOverlap="false"
+             card_view:cardUseCompatPadding="true"
+             card_view:contentPaddingRight="0dp"
+             card_view:contentPaddingLeft="0dp"
+             card_view:contentPaddingTop="0dp"
+             card_view:contentPaddingBottom="2dp"
+             android:id="@+id/downBorder3"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_centerHorizontal="true"  >
+
+          <RelativeLayout
+              android:id="@+id/relativeLayout3"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_centerHorizontal="true"
+              android:background="@color/white_grey"
+              android:paddingLeft="7dp"
+              android:paddingRight="7dp" >
+
+              <TextView
+                  android:id="@+id/Cylinder"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentTop="true"
+                  android:layout_centerHorizontal="true"
+                  android:layout_marginTop="7dp"
+                  android:text="Cylinder"
+                  android:textColor="@color/holo_green_dark"
+                  android:textSize="20sp"
+                  android:textStyle="bold" />
+
+              <TextView
+                  android:id="@+id/textCylinder2"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/textCylinder1"
+                  android:layout_centerHorizontal="true"
+                  android:gravity="center"
+                  android:text="Volume = π × r² × h"
+                  android:textColor="@color/grey"
+                  android:textStyle="bold"
+                  android:textSize="17sp"  />
+
+              <TextView
+                  android:id="@+id/textCylinder1"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/imageCylinder"
+                  android:layout_centerHorizontal="true"
+                  android:gravity="center"
+                  android:layout_marginTop="12dp"
+                  android:text="Surface Area = 2 × π × r × (r+h)"
+                  android:textColor="@color/grey"
+                  android:textStyle="bold"
+                  android:textSize="17sp"  />
+
+              <TextView
+                  android:id="@+id/textCylinder3"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/textCylinder2"
+                  android:layout_centerHorizontal="true"
+                  android:gravity="center"
+                  android:text="π = 3.14159..."
+                  android:textColor="@color/grey"
+                  android:textStyle="bold"
+                  android:textSize="17sp"  />
+
+              <Button
+                  android:id="@+id/buttonCylinder"
+                  android:layout_width="210dp"
+                  android:layout_height="46dp"
+                  android:background="@drawable/button_custom"
+                  android:textColor="@drawable/button_color_text"
+                  android:layout_below="@+id/editCylinder2"
+                  android:layout_centerHorizontal="true"
+                  android:textAllCaps="false"
+                  android:text="Calculate"
+                  android:textStyle="bold"
+                  android:textSize="17sp"
+                  android:onClick="calculate3"/>
+              
+              <EditText
+                  android:id="@+id/editCylinder1"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/textCylinder5"
+                  android:layout_alignLeft="@+id/buttonCylinder"
+                  android:layout_alignRight="@+id/buttonCylinder"
+                  android:hint="Write number r"
+                  android:ems="10"
+                  android:inputType="numberDecimal" 
+                  android:textSize="15sp"
+                  android:textStyle="italic"
+                  android:textColor="@color/grey"
+                  android:textColorHint="@color/hintcolor"
+                  android:gravity="center"/>
+              
+              <EditText
+                  android:id="@+id/editCylinder2"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/editCylinder1"
+                  android:layout_alignLeft="@+id/buttonCylinder"
+                  android:layout_alignRight="@+id/buttonCylinder"
+                  android:hint="Write number h"
+                  android:ems="10"
+                  android:inputType="numberDecimal" 
+                  android:textSize="15sp"
+                  android:textStyle="italic"
+                  android:textColor="@color/grey"
+                  android:textColorHint="@color/hintcolor"
+                  android:gravity="center"/>
+              
+              <TextView
+                  android:id="@+id/textCylinder6"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/buttonCylinder"
+                  android:layout_centerHorizontal="true"
+                  android:layout_marginTop="6dp"
+                  android:textStyle="bold"
+                  android:textSize="17sp"
+                  android:gravity="center"
+                  android:textColor="@color/holo_green_dark"
+                  android:textIsSelectable="true"/>
+
+              <ImageButton
+                  android:id="@+id/moreButton3"
+                  android:layout_width="30dp"
+                  android:layout_height="30dp"
+                  android:layout_alignParentRight="true"
+                  android:layout_below="@+id/textCylinder6"
+                  android:layout_marginTop="4dp"
+                  android:layout_marginBottom="7dp"
+                  android:layout_marginRight="0dp"
+                  android:background="@drawable/button_more_green"
+                  android:onClick="moreButtonClick3" />
+
+              <ImageView
+                  android:id="@+id/imageCylinder"
+                  android:layout_width="wrap_content"
+                  android:layout_height="85dp"
+                  android:layout_marginTop="12dp"
+                  android:layout_below="@+id/Cylinder"
+                  android:layout_centerHorizontal="true"
+                  android:src="@drawable/cylinder" />
+
+              <TextView
+                  android:id="@+id/textCylinder4"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_centerHorizontal="true"
+                  android:gravity="center"
+                  android:layout_below="@+id/textCylinder3"
+                  android:text="r = radius of base"
+                  android:textColor="@color/grey"
+                  android:textStyle="bold"
+                  android:textSize="17sp"  />
+              
+              <TextView
+                  android:id="@+id/textCylinder5"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_centerHorizontal="true"
+                  android:gravity="center"
+                  android:layout_below="@+id/textCylinder4"
+                  android:text="h = height of cylinder"
+                  android:textColor="@color/grey"
+                  android:textStyle="bold"
+                  android:textSize="17sp"  />
+              
+              <Button
+                  android:id="@+id/ShareCylinder"
+                  android:layout_width="60dp"
+                  android:layout_height="wrap_content"
+                  android:layout_alignBottom="@+id/buttonCylinder"
+                  android:layout_alignTop="@+id/buttonCylinder"
+                  android:layout_toRightOf="@+id/buttonCylinder"
+                  android:background="@drawable/button_share2"
+                  android:onClick="share3" />
+
+          </RelativeLayout>
+         </android.support.v7.widget.CardView>
+         </android.support.v7.widget.CardView>
+
+         <android.support.v7.widget.CardView
+             xmlns:card_view="http://schemas.android.com/apk/res-auto"
+             card_view:cardBackgroundColor="@color/holo_green_dark"
+             card_view:cardElevation="2dp"
+             card_view:cardCornerRadius="2dp"
+             card_view:cardPreventCornerOverlap="false"
+             card_view:cardUseCompatPadding="true"
+             card_view:contentPaddingRight="-2.5dp"
+             card_view:contentPaddingLeft="-2.5dp"
+             card_view:contentPaddingTop="6dp"
+             card_view:contentPaddingBottom="-4dp"
+             android:id="@+id/upBorder4"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_below="@+id/upBorder3"
+             android:layout_centerHorizontal="true"
+             android:layout_marginTop="6dp">
+
+         <android.support.v7.widget.CardView
+             xmlns:card_view="http://schemas.android.com/apk/res-auto"
+             card_view:cardBackgroundColor="@color/white_grey"
+             card_view:cardElevation="0dp"
+             card_view:cardCornerRadius="2dp"
+             card_view:cardPreventCornerOverlap="false"
+             card_view:cardUseCompatPadding="true"
+             card_view:contentPaddingRight="0dp"
+             card_view:contentPaddingLeft="0dp"
+             card_view:contentPaddingTop="0dp"
+             card_view:contentPaddingBottom="2dp"
+             android:id="@+id/downBorder4"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_centerHorizontal="true" >
+
+          <RelativeLayout
+              android:id="@+id/relativeLayout4"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_centerHorizontal="true"
+              android:background="@color/white_grey"
+              android:paddingLeft="7dp"
+              android:paddingRight="7dp" >
+
+              <TextView
+                  android:id="@+id/Cone"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentTop="true"
+                  android:layout_centerHorizontal="true"
+                  android:layout_marginTop="7dp"
+                  android:text="Cone"
+                  android:textColor="@color/holo_green_dark"
+                  android:textSize="20sp"
+                  android:textStyle="bold" />
+
+              <TextView
+                  android:id="@+id/textCone2"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/textCone1"
+                  android:layout_centerHorizontal="true"
+                  android:gravity="center"
+                  android:text="Volume = π × r² × h/3"
+                  android:textColor="@color/grey"
+                  android:textStyle="bold"
+                  android:textSize="17sp"  />
+
+              <TextView
+                  android:id="@+id/textCone1"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/imageCone"
+                  android:layout_centerHorizontal="true"
+                  android:gravity="center"
+                  android:layout_marginTop="12dp"
+                  android:text="Surface Area = π × r × (s+r)"
+                  android:textColor="@color/grey"
+                  android:textStyle="bold"
+                  android:textSize="17sp"  />
+
+              <TextView
+                  android:id="@+id/textCone3"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/textCone2"
+                  android:layout_centerHorizontal="true"
+                  android:gravity="center"
+                  android:text="π = 3.14159..."
+                  android:textColor="@color/grey"
+                  android:textStyle="bold"
+                  android:textSize="17sp"  />
+
+              <Button
+                  android:id="@+id/buttonCone"
+                  android:layout_width="210dp"
+                  android:layout_height="46dp"
+                  android:background="@drawable/button_custom"
+                  android:textColor="@drawable/button_color_text"
+                  android:layout_below="@+id/editCone2"
+                  android:layout_centerHorizontal="true"
+                  android:textAllCaps="false"
+                  android:text="Calculate"
+                  android:textStyle="bold"
+                  android:textSize="17sp"
+                  android:onClick="calculate4"/>
+              
+              <EditText
+                  android:id="@+id/editCone1"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/textCone6"
+                  android:layout_alignLeft="@+id/buttonCone"
+                  android:layout_alignRight="@+id/buttonCone"
+                  android:hint="Write number r"
+                  android:ems="10"
+                  android:inputType="numberDecimal" 
+                  android:textSize="15sp"
+                  android:textStyle="italic"
+                  android:textColor="@color/grey"
+                  android:textColorHint="@color/hintcolor"
+                  android:gravity="center"/>
+              
+              <EditText
+                  android:id="@+id/editCone2"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/editCone1"
+                  android:layout_alignLeft="@+id/buttonCone"
+                  android:layout_alignRight="@+id/buttonCone"
+                  android:hint="Write number h"
+                  android:ems="10"
+                  android:inputType="numberDecimal" 
+                  android:textSize="15sp"
+                  android:textStyle="italic"
+                  android:textColor="@color/grey"
+                  android:textColorHint="@color/hintcolor"
+                  android:gravity="center"/>
+              
+              <TextView
+                  android:id="@+id/textCone7"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/buttonCone"
+                  android:layout_centerHorizontal="true"
+                  android:layout_marginTop="6dp"
+                  android:textColor="@color/holo_green_dark"
+                  android:textIsSelectable="true"
+                  android:gravity="center"
+                  android:textStyle="bold"
+                  android:textSize="17sp" />
+
+              <ImageButton
+                  android:id="@+id/moreButton4"
+                  android:layout_width="30dp"
+                  android:layout_height="30dp"
+                  android:layout_alignParentRight="true"
+                  android:layout_below="@+id/textCone7"
+                  android:layout_marginTop="4dp"
+                  android:layout_marginBottom="7dp"
+                  android:layout_marginRight="0dp"
+                  android:background="@drawable/button_more_green"
+                  android:onClick="moreButtonClick4" />
+
+              <ImageView
+                  android:id="@+id/imageCone"
+                  android:layout_width="wrap_content"
+                  android:layout_height="85dp"
+                  android:layout_marginTop="12dp"
+                  android:layout_below="@+id/Cone"
+                  android:layout_centerHorizontal="true"
+                  android:src="@drawable/cone" />
+
+              <TextView
+                  android:id="@+id/textCone4"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_centerHorizontal="true"
+                  android:gravity="center"
+                  android:layout_below="@+id/textCone3"
+                  android:text="s = √(r² + h²)"
+                  android:textColor="@color/grey"
+                  android:textStyle="bold"
+                  android:textSize="17sp"  />
+              
+              <TextView
+                  android:id="@+id/textCone5"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_centerHorizontal="true"
+                  android:gravity="center"
+                  android:layout_below="@+id/textCone4"
+                  android:text="r = radius of base"
+                  android:textColor="@color/grey"
+                  android:textStyle="bold"
+                  android:textSize="17sp"  />
+              
+              <TextView
+                  android:id="@+id/textCone6"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_centerHorizontal="true"
+                  android:gravity="center"
+                  android:layout_below="@+id/textCone5"
+                  android:text="h = height of cone"
+                  android:textColor="@color/grey"
+                  android:textStyle="bold"
+                  android:textSize="17sp"  />
+              
+              <Button
+                  android:id="@+id/ShareCone"
+                  android:layout_width="60dp"
+                  android:layout_height="wrap_content"
+                  android:layout_alignBottom="@+id/buttonCone"
+                  android:layout_alignTop="@+id/buttonCone"
+                  android:layout_toRightOf="@+id/buttonCone"
+                  android:background="@drawable/button_share2"
+                  android:onClick="share4" />
+
+          </RelativeLayout>
+         </android.support.v7.widget.CardView>
+         </android.support.v7.widget.CardView>
+
+         <android.support.v7.widget.CardView
+             xmlns:card_view="http://schemas.android.com/apk/res-auto"
+             card_view:cardBackgroundColor="@color/holo_green_dark"
+             card_view:cardElevation="2dp"
+             card_view:cardCornerRadius="2dp"
+             card_view:cardPreventCornerOverlap="false"
+             card_view:cardUseCompatPadding="true"
+             card_view:contentPaddingRight="-2.5dp"
+             card_view:contentPaddingLeft="-2.5dp"
+             card_view:contentPaddingTop="6dp"
+             card_view:contentPaddingBottom="-4dp"
+             android:id="@+id/upBorder5"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_below="@+id/upBorder4"
+             android:layout_centerHorizontal="true"
+             android:layout_marginTop="6dp" >
+
+         <android.support.v7.widget.CardView
+             xmlns:card_view="http://schemas.android.com/apk/res-auto"
+             card_view:cardBackgroundColor="@color/white_grey"
+             card_view:cardElevation="0dp"
+             card_view:cardCornerRadius="2dp"
+             card_view:cardPreventCornerOverlap="false"
+             card_view:cardUseCompatPadding="true"
+             card_view:contentPaddingRight="0dp"
+             card_view:contentPaddingLeft="0dp"
+             card_view:contentPaddingTop="0dp"
+             card_view:contentPaddingBottom="2dp"
+                 android:id="@+id/downBorder5"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_centerHorizontal="true" >
+
+                 <RelativeLayout
+                     android:id="@+id/relativeLayout5"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_centerHorizontal="true"
+                     android:background="@color/white_grey"
+                     android:paddingLeft="7dp"
+                     android:paddingRight="7dp" >
+
+                     <TextView
+                         android:id="@+id/Cube"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_alignParentTop="true"
+                         android:layout_centerHorizontal="true"
+                         android:layout_marginTop="7dp"
+                         android:text="Cube (Regular Hexahedron)"
+                         android:textColor="@color/holo_green_dark"
+                         android:textSize="20sp"
+                         android:textStyle="bold" />
+
+                     <TextView
+                         android:id="@+id/textCube2"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/textCube1"
+                         android:layout_centerHorizontal="true"
+                         android:gravity="center"
+                         android:text="Volume = a^3"
+                         android:textColor="@color/grey"
+                         android:textStyle="bold"
+                         android:textSize="17sp"  />
+
+                     <TextView
+                         android:id="@+id/textCube1"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/imageCube"
+                         android:layout_centerHorizontal="true"
+                         android:gravity="center"
+                         android:layout_marginTop="12dp"
+                         android:text="Surface Area = 6 × a²"
+                         android:textColor="@color/grey"
+                         android:textStyle="bold"
+                         android:textSize="17sp"  />
+
+                     <TextView
+                         android:id="@+id/textCube3"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/textCube2"
+                         android:layout_centerHorizontal="true"
+                         android:gravity="center"
+                         android:text="a = edge length"
+                         android:textColor="@color/grey"
+                         android:textStyle="bold"
+                         android:textSize="17sp"  />
+
+                     <Button
+                         android:id="@+id/buttonCube"
+                         android:layout_width="210dp"
+                         android:layout_height="46dp"
+                         android:background="@drawable/button_custom"
+                         android:textColor="@drawable/button_color_text"
+                         android:layout_below="@+id/editCube1"
+                         android:layout_centerHorizontal="true"
+                         android:textAllCaps="false"
+                         android:text="Calculate"
+                         android:textStyle="bold"
+                         android:textSize="17sp"
+                         android:onClick="calculate5"/>
+
+                     <EditText
+                         android:id="@+id/editCube1"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/textCube3"
+                         android:layout_alignLeft="@+id/buttonCube"
+                         android:layout_alignRight="@+id/buttonCube"
+                         android:hint="Write number a"
+                         android:ems="10"
+                         android:inputType="numberDecimal"
+                         android:textSize="15sp"
+                         android:textStyle="italic"
+                         android:textColor="@color/grey"
+                         android:textColorHint="@color/hintcolor"
+                         android:gravity="center"/>
+
+                     <TextView
+                         android:id="@+id/textCube4"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/buttonCube"
+                         android:layout_centerHorizontal="true"
+                         android:layout_marginTop="6dp"
+                         android:textColor="@color/holo_green_dark"
+                         android:textIsSelectable="true"
+                         android:gravity="center"
+                         android:textStyle="bold"
+                         android:textSize="17sp"/>
+
+                     <ImageButton
+                         android:id="@+id/moreButton5"
+                         android:layout_width="30dp"
+                         android:layout_height="30dp"
+                         android:layout_alignParentRight="true"
+                         android:layout_below="@+id/textCube4"
+                         android:layout_marginTop="4dp"
+                         android:layout_marginBottom="7dp"
+                         android:layout_marginRight="0dp"
+                         android:background="@drawable/button_more_green"
+                         android:onClick="moreButtonClick5" />
+
+                     <ImageView
+                         android:id="@+id/imageCube"
+                         android:layout_width="wrap_content"
+                         android:layout_height="85dp"
+                         android:layout_marginTop="12dp"
+                         android:layout_below="@+id/Cube"
+                         android:layout_centerHorizontal="true"
+                         android:src="@drawable/cube" />
+
+
+
+                     <Button
+                         android:id="@+id/ShareCube"
+                         android:layout_width="60dp"
+                         android:layout_height="wrap_content"
+                         android:layout_alignBottom="@+id/buttonCube"
+                         android:layout_alignTop="@+id/buttonCube"
+                         android:layout_toRightOf="@+id/buttonCube"
+                         android:background="@drawable/button_share2"
+                         android:onClick="share5" />
+
+                 </RelativeLayout>
+         </android.support.v7.widget.CardView>
+         </android.support.v7.widget.CardView>
+
+         <android.support.v7.widget.CardView
+             xmlns:card_view="http://schemas.android.com/apk/res-auto"
+             card_view:cardBackgroundColor="@color/holo_green_dark"
+             card_view:cardElevation="2dp"
+             card_view:cardCornerRadius="2dp"
+             card_view:cardPreventCornerOverlap="false"
+             card_view:cardUseCompatPadding="true"
+             card_view:contentPaddingRight="-2.5dp"
+             card_view:contentPaddingLeft="-2.5dp"
+             card_view:contentPaddingTop="6dp"
+             card_view:contentPaddingBottom="-4dp"
+             android:id="@+id/upBorder6"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_centerHorizontal="true"
+             android:layout_below="@+id/upBorder5"
+             android:layout_marginTop="6dp" >
+
+         <android.support.v7.widget.CardView
+             xmlns:card_view="http://schemas.android.com/apk/res-auto"
+             card_view:cardBackgroundColor="@color/white_grey"
+             card_view:cardElevation="0dp"
+             card_view:cardCornerRadius="2dp"
+             card_view:cardPreventCornerOverlap="false"
+             card_view:cardUseCompatPadding="true"
+             card_view:contentPaddingRight="0dp"
+             card_view:contentPaddingLeft="0dp"
+             card_view:contentPaddingTop="0dp"
+             card_view:contentPaddingBottom="2dp"
+                 android:id="@+id/downBorder6"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_centerHorizontal="true">
+
+                 <RelativeLayout
+                     android:id="@+id/relativeLayout6"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_centerHorizontal="true"
+                     android:background="@color/white_grey"
+                     android:paddingLeft="7dp"
+                     android:paddingRight="7dp" >
+
+                     <TextView
+                         android:id="@+id/Parallelepiped"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_alignParentTop="true"
+                         android:layout_centerHorizontal="true"
+                         android:layout_marginTop="7dp"
+                         android:text="Parallelepiped"
+                         android:textColor="@color/holo_green_dark"
+                         android:textSize="20sp"
+                         android:textStyle="bold" />
+
+                     <TextView
+                         android:id="@+id/textParallelepiped2"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/textParallelepiped1"
+                         android:layout_centerHorizontal="true"
+                         android:gravity="center"
+                         android:text="Volume = l × w × h"
+                         android:textColor="@color/grey"
+                         android:textStyle="bold"
+                         android:textSize="17sp"  />
+
+                     <TextView
+                         android:id="@+id/textParallelepiped1"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/imageParallelepiped"
+                         android:layout_centerHorizontal="true"
+                         android:layout_marginTop="12dp"
+                         android:text="Surface Area = 2 × (w × l + l × h + h × w)"
+                         android:textColor="@color/grey"
+                         android:gravity="center"
+                         android:textStyle="bold"
+                         android:textSize="17sp"  />
+
+                     <TextView
+                         android:id="@+id/textParallelepiped3"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/textParallelepiped2"
+                         android:layout_centerHorizontal="true"
+                         android:gravity="center"
+                         android:text="l , w = edge length of base"
+                         android:textColor="@color/grey"
+                         android:textStyle="bold"
+                         android:textSize="17sp"  />
+
+                     <Button
+                         android:id="@+id/buttonParallelepiped"
+                         android:layout_width="210dp"
+                         android:layout_height="46dp"
+                         android:background="@drawable/button_custom"
+                         android:textColor="@drawable/button_color_text"
+                         android:layout_below="@+id/editParallelepiped3"
+                         android:layout_centerHorizontal="true"
+                         android:textAllCaps="false"
+                         android:text="Calculate"
+                         android:textStyle="bold"
+                         android:textSize="17sp"
+                         android:onClick="calculate6"/>
+
+                     <EditText
+                         android:id="@+id/editParallelepiped1"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/textParallelepiped4"
+                         android:layout_alignLeft="@+id/buttonParallelepiped"
+                         android:layout_alignRight="@+id/buttonParallelepiped"
+                         android:hint="Write number l"
+                         android:ems="10"
+                         android:inputType="numberDecimal"
+                         android:textSize="15sp"
+                         android:textStyle="italic"
+                         android:textColor="@color/grey"
+                         android:textColorHint="@color/hintcolor"
+                         android:gravity="center"/>
+
+                     <EditText
+                         android:id="@+id/editParallelepiped2"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/editParallelepiped1"
+                         android:layout_alignLeft="@+id/buttonParallelepiped"
+                         android:layout_alignRight="@+id/buttonParallelepiped"
+                         android:hint="Write number w"
+                         android:ems="10"
+                         android:inputType="numberDecimal"
+                         android:textSize="15sp"
+                         android:textStyle="italic"
+                         android:textColor="@color/grey"
+                         android:textColorHint="@color/hintcolor"
+                         android:gravity="center"/>
+
+                     <EditText
+                         android:id="@+id/editParallelepiped3"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/editParallelepiped2"
+                         android:layout_alignLeft="@+id/buttonParallelepiped"
+                         android:layout_alignRight="@+id/buttonParallelepiped"
+                         android:hint="Write number h"
+                         android:ems="10"
+                         android:inputType="numberDecimal"
+                         android:textSize="15sp"
+                         android:textStyle="italic"
+                         android:textColor="@color/grey"
+                         android:textColorHint="@color/hintcolor"
+                         android:gravity="center"/>
+
+                     <TextView
+                         android:id="@+id/textParallelepiped5"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/buttonParallelepiped"
+                         android:layout_centerHorizontal="true"
+                         android:layout_marginTop="6dp"
+                         android:textStyle="bold"
+                         android:textSize="17sp"
+                         android:gravity="center"
+                         android:textColor="@color/holo_green_dark"
+                         android:textIsSelectable="true"/>
+
+                     <ImageButton
+                         android:id="@+id/moreButton6"
+                         android:layout_width="30dp"
+                         android:layout_height="30dp"
+                         android:layout_alignParentRight="true"
+                         android:layout_below="@+id/textParallelepiped5"
+                         android:layout_marginTop="4dp"
+                         android:layout_marginBottom="7dp"
+                         android:layout_marginRight="0dp"
+                         android:background="@drawable/button_more_green"
+                         android:onClick="moreButtonClick6" />
+
+                     <ImageView
+                         android:id="@+id/imageParallelepiped"
+                         android:layout_width="120dp"
+                         android:layout_height="85dp"
+                         android:layout_marginTop="12dp"
+                         android:layout_below="@+id/Parallelepiped"
+                         android:layout_centerHorizontal="true"
+                         android:src="@drawable/parallelepiped" />
+
+                     <TextView
+                         android:id="@+id/textParallelepiped4"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_centerHorizontal="true"
+                         android:gravity="center"
+                         android:layout_below="@+id/textParallelepiped3"
+                         android:text="h = height of parallelepiped"
+                         android:textColor="@color/grey"
+                         android:textStyle="bold"
+                         android:textSize="17sp"  />
+
+                     <Button
+                         android:id="@+id/ShareParallelepiped"
+                         android:layout_width="60dp"
+                         android:layout_height="wrap_content"
+                         android:layout_alignBottom="@+id/buttonParallelepiped"
+                         android:layout_alignTop="@+id/buttonParallelepiped"
+                         android:layout_toRightOf="@+id/buttonParallelepiped"
+                         android:background="@drawable/button_share2"
+                         android:onClick="share6" />
+
+                 </RelativeLayout>
+         </android.support.v7.widget.CardView>
+         </android.support.v7.widget.CardView>
+
+         <android.support.v7.widget.CardView
+             xmlns:card_view="http://schemas.android.com/apk/res-auto"
+             card_view:cardBackgroundColor="@color/holo_green_dark"
+             card_view:cardElevation="2dp"
+             card_view:cardCornerRadius="2dp"
+             card_view:cardPreventCornerOverlap="false"
+             card_view:cardUseCompatPadding="true"
+             card_view:contentPaddingRight="-2.5dp"
+             card_view:contentPaddingLeft="-2.5dp"
+             card_view:contentPaddingTop="6dp"
+             card_view:contentPaddingBottom="-4dp"
+             android:id="@+id/upBorder7"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_below="@+id/upBorder6"
+             android:layout_centerHorizontal="true"
+             android:layout_marginTop="6dp" >
+
+         <android.support.v7.widget.CardView
+             xmlns:card_view="http://schemas.android.com/apk/res-auto"
+             card_view:cardBackgroundColor="@color/white_grey"
+             card_view:cardElevation="0dp"
+             card_view:cardCornerRadius="2dp"
+             card_view:cardPreventCornerOverlap="false"
+             card_view:cardUseCompatPadding="true"
+             card_view:contentPaddingRight="0dp"
+             card_view:contentPaddingLeft="0dp"
+             card_view:contentPaddingTop="0dp"
+             card_view:contentPaddingBottom="2dp"
+                 android:id="@+id/downBorder7"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_centerHorizontal="true" >
+
+                 <RelativeLayout
+                     android:id="@+id/relativeLayout7"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_centerHorizontal="true"
+                     android:background="@color/white_grey"
+                     android:paddingLeft="7dp"
+                     android:paddingRight="7dp" >
+
+                     <TextView
+                         android:id="@+id/TriangularPyramid1"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_alignParentTop="true"
+                         android:layout_centerHorizontal="true"
+                         android:layout_marginTop="7dp"
+                         android:text="Triangular Pyramid"
+                         android:textColor="@color/holo_green_dark"
+                         android:textSize="20sp"
+                         android:textStyle="bold" />
+
+                     <TextView
+                         android:id="@+id/TriangularPyramid2"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_centerHorizontal="true"
+                         android:layout_below="@+id/TriangularPyramid1"
+                         android:text="(Regular Tetrahedron)"
+                         android:textColor="@color/holo_green_dark"
+                         android:textSize="20sp"
+                         android:textStyle="bold" />
+
+                     <TextView
+                         android:id="@+id/textTriangularPyramid2"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/textTriangularPyramid1"
+                         android:layout_centerHorizontal="true"
+                         android:gravity="center"
+                         android:text="Volume = √2/12 × a^3"
+                         android:textColor="@color/grey"
+                         android:textStyle="bold"
+                         android:textSize="17sp"  />
+
+                     <TextView
+                         android:id="@+id/textTriangularPyramid1"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/imageTriangularPyramid"
+                         android:layout_centerHorizontal="true"
+                         android:gravity="center"
+                         android:layout_marginTop="12dp"
+                         android:text="Surface Area = √3 × a²"
+                         android:textColor="@color/grey"
+                         android:textStyle="bold"
+                         android:textSize="17sp"  />
+
+                     <TextView
+                         android:id="@+id/textTriangularPyramid3"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/textTriangularPyramid2"
+                         android:layout_centerHorizontal="true"
+                         android:gravity="center"
+                         android:text="a = edge length"
+                         android:textColor="@color/grey"
+                         android:textStyle="bold"
+                         android:textSize="17sp"  />
+
+                     <Button
+                         android:id="@+id/buttonTriangularPyramid"
+                         android:layout_width="210dp"
+                         android:layout_height="46dp"
+                         android:background="@drawable/button_custom"
+                         android:textColor="@drawable/button_color_text"
+                         android:layout_below="@+id/editTriangularPyramid1"
+                         android:layout_centerHorizontal="true"
+                         android:textAllCaps="false"
+                         android:text="Calculate"
+                         android:textStyle="bold"
+                         android:textSize="17sp"
+                         android:onClick="calculate7"/>
+
+                     <EditText
+                         android:id="@+id/editTriangularPyramid1"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/textTriangularPyramid3"
+                         android:layout_alignLeft="@+id/buttonTriangularPyramid"
+                         android:layout_alignRight="@+id/buttonTriangularPyramid"
+                         android:hint="Write number a"
+                         android:ems="10"
+                         android:inputType="numberDecimal"
+                         android:textSize="15sp"
+                         android:textStyle="italic"
+                         android:textColor="@color/grey"
+                         android:textColorHint="@color/hintcolor"
+                         android:gravity="center"/>
+
+                     <TextView
+                         android:id="@+id/textTriangularPyramid4"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/buttonTriangularPyramid"
+                         android:layout_centerHorizontal="true"
+                         android:layout_marginTop="6dp"
+                         android:textStyle="bold"
+                         android:textSize="17sp"
+                         android:gravity="center"
+                         android:textColor="@color/holo_green_dark"
+                         android:textIsSelectable="true"/>
+
+                     <ImageButton
+                         android:id="@+id/moreButton7"
+                         android:layout_width="30dp"
+                         android:layout_height="30dp"
+                         android:layout_alignParentRight="true"
+                         android:layout_below="@+id/textTriangularPyramid4"
+                         android:layout_marginTop="4dp"
+                         android:layout_marginBottom="7dp"
+                         android:layout_marginRight="0dp"
+                         android:background="@drawable/button_more_green"
+                         android:onClick="moreButtonClick7" />
+
+                     <ImageView
+                         android:id="@+id/imageTriangularPyramid"
+                         android:layout_width="wrap_content"
+                         android:layout_height="85dp"
+                         android:layout_marginTop="12dp"
+                         android:layout_below="@+id/TriangularPyramid2"
+                         android:layout_centerHorizontal="true"
+                         android:src="@drawable/tetrahedron" />
+
+                     <Button
+                         android:id="@+id/ShareTriangularPyramid"
+                         android:layout_width="60dp"
+                         android:layout_height="wrap_content"
+                         android:layout_alignBottom="@+id/buttonTriangularPyramid"
+                         android:layout_alignTop="@+id/buttonTriangularPyramid"
+                         android:layout_toRightOf="@+id/buttonTriangularPyramid"
+                         android:background="@drawable/button_share2"
+                         android:onClick="share7" />
+
+                 </RelativeLayout>
+         </android.support.v7.widget.CardView>
+         </android.support.v7.widget.CardView>
+
+         <android.support.v7.widget.CardView
+             xmlns:card_view="http://schemas.android.com/apk/res-auto"
+             card_view:cardBackgroundColor="@color/holo_green_dark"
+             card_view:cardElevation="2dp"
+             card_view:cardCornerRadius="2dp"
+             card_view:cardPreventCornerOverlap="false"
+             card_view:cardUseCompatPadding="true"
+             card_view:contentPaddingRight="-2.5dp"
+             card_view:contentPaddingLeft="-2.5dp"
+             card_view:contentPaddingTop="6dp"
+             card_view:contentPaddingBottom="-4dp"
+             android:id="@+id/upBorder8"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_below="@+id/upBorder7"
+             android:layout_centerHorizontal="true"
+             android:layout_marginTop="6dp"  >
+
+         <android.support.v7.widget.CardView
+             xmlns:card_view="http://schemas.android.com/apk/res-auto"
+             card_view:cardBackgroundColor="@color/white_grey"
+             card_view:cardElevation="0dp"
+             card_view:cardCornerRadius="2dp"
+             card_view:cardPreventCornerOverlap="false"
+             card_view:cardUseCompatPadding="true"
+             card_view:contentPaddingRight="0dp"
+             card_view:contentPaddingLeft="0dp"
+             card_view:contentPaddingTop="0dp"
+             card_view:contentPaddingBottom="2dp"
+                 android:id="@+id/downBorder8"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_centerHorizontal="true" >
+
+                 <RelativeLayout
+                     android:id="@+id/relativeLayout8"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_centerHorizontal="true"
+                     android:background="@color/white_grey"
+                     android:paddingLeft="7dp"
+                     android:paddingRight="7dp" >
+
+                     <TextView
+                         android:id="@+id/SquarePyramid"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_alignParentTop="true"
+                         android:layout_centerHorizontal="true"
+                         android:layout_marginTop="7dp"
+                         android:text="Square Pyramid"
+                         android:textColor="@color/holo_green_dark"
+                         android:textSize="20sp"
+                         android:textStyle="bold" />
+
+                     <TextView
+                         android:id="@+id/textSquarePyramid2"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/textSquarePyramid1"
+                         android:layout_centerHorizontal="true"
+                         android:gravity="center"
+                         android:text="Volume = √2/12 × a^3"
+                         android:textColor="@color/grey"
+                         android:textStyle="bold"
+                         android:textSize="17sp"  />
+
+                     <TextView
+                         android:id="@+id/textSquarePyramid1"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/imageSquarePyramid"
+                         android:layout_centerHorizontal="true"
+                         android:gravity="center"
+                         android:layout_marginTop="12dp"
+                         android:text="Surface Area = (1 + √3) × a²"
+                         android:textColor="@color/grey"
+                         android:textStyle="bold"
+                         android:textSize="17sp"  />
+
+                     <TextView
+                         android:id="@+id/textSquarePyramid3"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/textSquarePyramid2"
+                         android:layout_centerHorizontal="true"
+                         android:gravity="center"
+                         android:text="a = edge length"
+                         android:textColor="@color/grey"
+                         android:textStyle="bold"
+                         android:textSize="17sp"  />
+
+                     <Button
+                         android:id="@+id/buttonSquarePyramid"
+                         android:layout_width="210dp"
+                         android:layout_height="46dp"
+                         android:background="@drawable/button_custom"
+                         android:textColor="@drawable/button_color_text"
+                         android:layout_below="@+id/editSquarePyramid1"
+                         android:layout_centerHorizontal="true"
+                         android:textAllCaps="false"
+                         android:text="Calculate"
+                         android:textStyle="bold"
+                         android:textSize="17sp"
+                         android:onClick="calculate8"/>
+
+                     <EditText
+                         android:id="@+id/editSquarePyramid1"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/textSquarePyramid3"
+                         android:layout_alignLeft="@+id/buttonSquarePyramid"
+                         android:layout_alignRight="@+id/buttonSquarePyramid"
+                         android:hint="Write number a"
+                         android:ems="10"
+                         android:inputType="numberDecimal"
+                         android:textSize="15sp"
+                         android:textStyle="italic"
+                         android:textColor="@color/grey"
+                         android:textColorHint="@color/hintcolor"
+                         android:gravity="center"/>
+
+                     <TextView
+                         android:id="@+id/textSquarePyramid4"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/buttonSquarePyramid"
+                         android:layout_centerHorizontal="true"
+                         android:layout_marginTop="6dp"
+                         android:textStyle="bold"
+                         android:textSize="17sp"
+                         android:gravity="center"
+                         android:textColor="@color/holo_green_dark"
+                         android:textIsSelectable="true"/>
+
+                     <ImageButton
+                         android:id="@+id/moreButton8"
+                         android:layout_width="30dp"
+                         android:layout_height="30dp"
+                         android:layout_alignParentRight="true"
+                         android:layout_below="@+id/textSquarePyramid4"
+                         android:layout_marginTop="4dp"
+                         android:layout_marginBottom="7dp"
+                         android:layout_marginRight="0dp"
+                         android:background="@drawable/button_more_green"
+                         android:onClick="moreButtonClick8" />
+
+                     <ImageView
+                         android:id="@+id/imageSquarePyramid"
+                         android:layout_width="wrap_content"
+                         android:layout_height="85dp"
+                         android:layout_marginTop="12dp"
+                         android:layout_below="@+id/SquarePyramid"
+                         android:layout_centerHorizontal="true"
+                         android:src="@drawable/squarepyramid" />
+
+                     <Button
+                         android:id="@+id/ShareSquarePyramid"
+                         android:layout_width="60dp"
+                         android:layout_height="wrap_content"
+                         android:layout_alignBottom="@+id/buttonSquarePyramid"
+                         android:layout_alignTop="@+id/buttonSquarePyramid"
+                         android:layout_toRightOf="@+id/buttonSquarePyramid"
+                         android:background="@drawable/button_share2"
+                         android:onClick="share8" />
+
+                 </RelativeLayout>
+         </android.support.v7.widget.CardView>
+         </android.support.v7.widget.CardView>
+
+         <android.support.v7.widget.CardView
+             xmlns:card_view="http://schemas.android.com/apk/res-auto"
+             card_view:cardBackgroundColor="@color/holo_green_dark"
+             card_view:cardElevation="2dp"
+             card_view:cardCornerRadius="2dp"
+             card_view:cardPreventCornerOverlap="false"
+             card_view:cardUseCompatPadding="true"
+             card_view:contentPaddingRight="-2.5dp"
+             card_view:contentPaddingLeft="-2.5dp"
+             card_view:contentPaddingTop="6dp"
+             card_view:contentPaddingBottom="-4dp"
+             android:id="@+id/upBorder9"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_centerHorizontal="true"
+             android:layout_below="@+id/upBorder8"
+             android:layout_marginTop="6dp">
+
+         <android.support.v7.widget.CardView
+             xmlns:card_view="http://schemas.android.com/apk/res-auto"
+             card_view:cardBackgroundColor="@color/white_grey"
+             card_view:cardElevation="0dp"
+             card_view:cardCornerRadius="2dp"
+             card_view:cardPreventCornerOverlap="false"
+             card_view:cardUseCompatPadding="true"
+             card_view:contentPaddingRight="0dp"
+             card_view:contentPaddingLeft="0dp"
+             card_view:contentPaddingTop="0dp"
+             card_view:contentPaddingBottom="2dp"
+                 android:id="@+id/downBorder9"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_centerHorizontal="true" >
+
+                 <RelativeLayout
+                     android:id="@+id/relativeLayout9"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_centerHorizontal="true"
+                     android:background="@color/white_grey"
+                     android:paddingLeft="7dp"
+                     android:paddingRight="7dp" >
+
+                     <TextView
+                         android:id="@+id/TriangularPrism"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_alignParentTop="true"
+                         android:layout_centerHorizontal="true"
+                         android:layout_marginTop="7dp"
+                         android:text="Triangular Prism"
+                         android:textColor="@color/holo_green_dark"
+                         android:textSize="20sp"
+                         android:textStyle="bold" />
+
+                     <TextView
+                         android:id="@+id/textTriangularPrism2"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/textTriangularPrism1"
+                         android:layout_centerHorizontal="true"
+                         android:gravity="center"
+                         android:text="Volume = √3/4 × a² × h"
+                         android:textColor="@color/grey"
+                         android:textStyle="bold"
+                         android:textSize="17sp"  />
+
+                     <TextView
+                         android:id="@+id/textTriangularPrism1"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/imageTriangularPrism"
+                         android:layout_centerHorizontal="true"
+                         android:gravity="center"
+                         android:layout_marginTop="12dp"
+                         android:text="Surface Area = √3/2 × a² + 3 × a × h"
+                         android:textColor="@color/grey"
+                         android:textStyle="bold"
+                         android:textSize="17sp"  />
+
+                     <TextView
+                         android:id="@+id/textTriangularPrism3"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/textTriangularPrism2"
+                         android:layout_centerHorizontal="true"
+                         android:gravity="center"
+                         android:text="a = edge length of triangular base"
+                         android:textColor="@color/grey"
+                         android:textStyle="bold"
+                         android:textSize="17sp"  />
+
+                     <Button
+                         android:id="@+id/buttonTriangularPrism"
+                         android:layout_width="210dp"
+                         android:layout_height="46dp"
+                         android:background="@drawable/button_custom"
+                         android:textColor="@drawable/button_color_text"
+                         android:layout_below="@+id/editTriangularPrism2"
+                         android:layout_centerHorizontal="true"
+                         android:textAllCaps="false"
+                         android:text="Calculate"
+                         android:textStyle="bold"
+                         android:textSize="17sp"
+                         android:onClick="calculate9"/>
+
+                     <EditText
+                         android:id="@+id/editTriangularPrism1"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/textTriangularPrism4"
+                         android:layout_alignLeft="@+id/buttonTriangularPrism"
+                         android:layout_alignRight="@+id/buttonTriangularPrism"
+                         android:hint="Write number a"
+                         android:ems="10"
+                         android:inputType="numberDecimal"
+                         android:textSize="15sp"
+                         android:textStyle="italic"
+                         android:textColor="@color/grey"
+                         android:textColorHint="@color/hintcolor"
+                         android:gravity="center"/>
+
+                     <EditText
+                         android:id="@+id/editTriangularPrism2"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/editTriangularPrism1"
+                         android:layout_alignLeft="@+id/buttonTriangularPrism"
+                         android:layout_alignRight="@+id/buttonTriangularPrism"
+                         android:hint="Write number h"
+                         android:ems="10"
+                         android:inputType="numberDecimal"
+                         android:textSize="15sp"
+                         android:textStyle="italic"
+                         android:textColor="@color/grey"
+                         android:textColorHint="@color/hintcolor"
+                         android:gravity="center"/>
+
+                     <TextView
+                         android:id="@+id/textTriangularPrism5"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/buttonTriangularPrism"
+                         android:layout_centerHorizontal="true"
+                         android:layout_marginTop="6dp"
+                         android:textStyle="bold"
+                         android:textSize="17sp"
+                         android:gravity="center"
+                         android:textColor="@color/holo_green_dark"
+                         android:textIsSelectable="true"/>
+
+                     <ImageButton
+                         android:id="@+id/moreButton9"
+                         android:layout_width="30dp"
+                         android:layout_height="30dp"
+                         android:layout_alignParentRight="true"
+                         android:layout_below="@+id/textTriangularPrism5"
+                         android:layout_marginTop="4dp"
+                         android:layout_marginBottom="7dp"
+                         android:layout_marginRight="0dp"
+                         android:background="@drawable/button_more_green"
+                         android:onClick="moreButtonClick9" />
+
+                     <ImageView
+                         android:id="@+id/imageTriangularPrism"
+                         android:layout_width="wrap_content"
+                         android:layout_height="85dp"
+                         android:layout_marginTop="12dp"
+                         android:layout_below="@+id/TriangularPrism"
+                         android:layout_centerHorizontal="true"
+                         android:src="@drawable/triangular_prism" />
+
+                     <TextView
+                         android:id="@+id/textTriangularPrism4"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_centerHorizontal="true"
+                         android:gravity="center"
+                         android:layout_below="@+id/textTriangularPrism3"
+                         android:text="h = height of prism"
+                         android:textColor="@color/grey"
+                         android:textStyle="bold"
+                         android:textSize="17sp"  />
+
+                     <Button
+                         android:id="@+id/ShareTriangularPrism"
+                         android:layout_width="60dp"
+                         android:layout_height="wrap_content"
+                         android:layout_alignBottom="@+id/buttonTriangularPrism"
+                         android:layout_alignTop="@+id/buttonTriangularPrism"
+                         android:layout_toRightOf="@+id/buttonTriangularPrism"
+                         android:background="@drawable/button_share2"
+                         android:onClick="share9" />
+
+                 </RelativeLayout>
+         </android.support.v7.widget.CardView>
+         </android.support.v7.widget.CardView>
+
+         <android.support.v7.widget.CardView
+             xmlns:card_view="http://schemas.android.com/apk/res-auto"
+             card_view:cardBackgroundColor="@color/holo_green_dark"
+             card_view:cardElevation="2dp"
+             card_view:cardCornerRadius="2dp"
+             card_view:cardPreventCornerOverlap="false"
+             card_view:cardUseCompatPadding="true"
+             card_view:contentPaddingRight="-2.5dp"
+             card_view:contentPaddingLeft="-2.5dp"
+             card_view:contentPaddingTop="6dp"
+             card_view:contentPaddingBottom="-4dp"
+             android:id="@+id/upBorder10"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_centerHorizontal="true"
+             android:layout_below="@+id/upBorder9"
+             android:layout_marginTop="6dp" >
+
+         <android.support.v7.widget.CardView
+             xmlns:card_view="http://schemas.android.com/apk/res-auto"
+             card_view:cardBackgroundColor="@color/white_grey"
+             card_view:cardElevation="0dp"
+             card_view:cardCornerRadius="2dp"
+             card_view:cardPreventCornerOverlap="false"
+             card_view:cardUseCompatPadding="true"
+             card_view:contentPaddingRight="0dp"
+             card_view:contentPaddingLeft="0dp"
+             card_view:contentPaddingTop="0dp"
+             card_view:contentPaddingBottom="2dp"
+                 android:id="@+id/downBorder10"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_centerHorizontal="true" >
+
+                 <RelativeLayout
+                     android:id="@+id/relativeLayout10"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_centerHorizontal="true"
+                     android:background="@color/white_grey"
+                     android:paddingLeft="7dp"
+                     android:paddingRight="7dp" >
+
+                     <TextView
+                         android:id="@+id/PentagonalPrism"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_alignParentTop="true"
+                         android:layout_centerHorizontal="true"
+                         android:layout_marginTop="7dp"
+                         android:text="Pentagonal Prism"
+                         android:textColor="@color/holo_green_dark"
+                         android:textSize="20sp"
+                         android:textStyle="bold" />
+
+                     <TextView
+                         android:id="@+id/textPentagonalPrism2"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/textPentagonalPrism1"
+                         android:text="Volume = ¼ × √(25 + 10√5) × a² × h"
+                         android:textColor="@color/grey"
+                         android:layout_centerHorizontal="true"
+                         android:gravity="center"
+                         android:textStyle="bold"
+                         android:textSize="17sp"  />
+
+                     <TextView
+                         android:id="@+id/textPentagonalPrism1"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/imagePentagonalPrism"
+                         android:layout_marginTop="12dp"
+                         android:text="Surface Area = ½ × √(25 + 10√5) × a² + 5 × h × a"
+                         android:textColor="@color/grey"
+                         android:layout_centerHorizontal="true"
+                         android:gravity="center"
+                         android:textStyle="bold"
+                         android:textSize="17sp"/>
+
+                     <TextView
+                         android:id="@+id/textPentagonalPrism3"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/textPentagonalPrism2"
+                         android:text="a = edge length of pentagonal base"
+                         android:textColor="@color/grey"
+                         android:layout_centerHorizontal="true"
+                         android:gravity="center"
+                         android:textStyle="bold"
+                         android:textSize="17sp"/>
+
+                     <Button
+                         android:id="@+id/buttonPentagonalPrism"
+                         android:layout_width="210dp"
+                         android:layout_height="46dp"
+                         android:background="@drawable/button_custom"
+                         android:textColor="@drawable/button_color_text"
+                         android:layout_below="@+id/editPentagonalPrism2"
+                         android:layout_centerHorizontal="true"
+                         android:textAllCaps="false"
+                         android:text="Calculate"
+                         android:textStyle="bold"
+                         android:textSize="17sp"
+                         android:onClick="calculate10"/>
+
+                     <EditText
+                         android:id="@+id/editPentagonalPrism1"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/textPentagonalPrism4"
+                         android:layout_alignLeft="@+id/buttonPentagonalPrism"
+                         android:layout_alignRight="@+id/buttonPentagonalPrism"
+                         android:hint="Write number a"
+                         android:ems="10"
+                         android:inputType="numberDecimal"
+                         android:textSize="15sp"
+                         android:textStyle="italic"
+                         android:textColor="@color/grey"
+                         android:textColorHint="@color/hintcolor"
+                         android:gravity="center"/>
+
+                     <EditText
+                         android:id="@+id/editPentagonalPrism2"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/editPentagonalPrism1"
+                         android:layout_alignLeft="@+id/buttonPentagonalPrism"
+                         android:layout_alignRight="@+id/buttonPentagonalPrism"
+                         android:hint="Write number h"
+                         android:ems="10"
+                         android:inputType="numberDecimal"
+                         android:textSize="15sp"
+                         android:textStyle="italic"
+                         android:textColor="@color/grey"
+                         android:textColorHint="@color/hintcolor"
+                         android:gravity="center"/>
+
+                     <TextView
+                         android:id="@+id/textPentagonalPrism5"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/buttonPentagonalPrism"
+                         android:layout_centerHorizontal="true"
+                         android:layout_marginTop="6dp"
+                         android:textStyle="bold"
+                         android:textSize="17sp"
+                         android:gravity="center"
+                         android:textColor="@color/holo_green_dark"
+                         android:textIsSelectable="true"/>
+
+                     <ImageButton
+                         android:id="@+id/moreButton10"
+                         android:layout_width="30dp"
+                         android:layout_height="30dp"
+                         android:layout_alignParentRight="true"
+                         android:layout_below="@+id/textPentagonalPrism5"
+                         android:layout_marginTop="4dp"
+                         android:layout_marginBottom="7dp"
+                         android:layout_marginRight="0dp"
+                         android:background="@drawable/button_more_green"
+                         android:onClick="moreButtonClick10" />
+
+                     <ImageView
+                         android:id="@+id/imagePentagonalPrism"
+                         android:layout_width="wrap_content"
+                         android:layout_height="85dp"
+                         android:layout_marginTop="12dp"
+                         android:layout_below="@+id/PentagonalPrism"
+                         android:layout_centerHorizontal="true"
+                         android:src="@drawable/pentagonal_prism" />
+
+                     <TextView
+                         android:id="@+id/textPentagonalPrism4"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_centerHorizontal="true"
+                         android:gravity="center"
+                         android:layout_below="@+id/textPentagonalPrism3"
+                         android:text="h = height of prism"
+                         android:textColor="@color/grey"
+                         android:textStyle="bold"
+                         android:textSize="17sp"  />
+
+                     <Button
+                         android:id="@+id/SharePentagonalPrism"
+                         android:layout_width="60dp"
+                         android:layout_height="wrap_content"
+                         android:layout_alignBottom="@+id/buttonPentagonalPrism"
+                         android:layout_alignTop="@+id/buttonPentagonalPrism"
+                         android:layout_toRightOf="@+id/buttonPentagonalPrism"
+                         android:background="@drawable/button_share2"
+                         android:onClick="share10" />
+
+                 </RelativeLayout>
+         </android.support.v7.widget.CardView>
+         </android.support.v7.widget.CardView>
+
+         <android.support.v7.widget.CardView
+             xmlns:card_view="http://schemas.android.com/apk/res-auto"
+             card_view:cardBackgroundColor="@color/holo_green_dark"
+             card_view:cardElevation="2dp"
+             card_view:cardCornerRadius="2dp"
+             card_view:cardPreventCornerOverlap="false"
+             card_view:cardUseCompatPadding="true"
+             card_view:contentPaddingRight="-2.5dp"
+             card_view:contentPaddingLeft="-2.5dp"
+             card_view:contentPaddingTop="6dp"
+             card_view:contentPaddingBottom="-4dp"
+             android:id="@+id/upBorder11"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_below="@+id/upBorder10"
+             android:layout_centerHorizontal="true"
+             android:layout_marginTop="6dp" >
+
+         <android.support.v7.widget.CardView
+             xmlns:card_view="http://schemas.android.com/apk/res-auto"
+             card_view:cardBackgroundColor="@color/white_grey"
+             card_view:cardElevation="0dp"
+             card_view:cardCornerRadius="2dp"
+             card_view:cardPreventCornerOverlap="false"
+             card_view:cardUseCompatPadding="true"
+             card_view:contentPaddingRight="0dp"
+             card_view:contentPaddingLeft="0dp"
+             card_view:contentPaddingTop="0dp"
+             card_view:contentPaddingBottom="2dp"
+                 android:id="@+id/downBorder11"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_centerHorizontal="true" >
+
+                 <RelativeLayout
+                     android:id="@+id/relativeLayout11"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_centerHorizontal="true"
+                     android:background="@color/white_grey"
+                     android:paddingLeft="7dp"
+                     android:paddingRight="7dp" >
+
+                     <TextView
+                         android:id="@+id/Octahedron"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_alignParentTop="true"
+                         android:layout_centerHorizontal="true"
+                         android:layout_marginTop="7dp"
+                         android:text="Regular Octahedron"
+                         android:textColor="@color/holo_green_dark"
+                         android:textSize="20sp"
+                         android:textStyle="bold" />
+
+                     <TextView
+                         android:id="@+id/textOctahedron2"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/textOctahedron1"
+                         android:layout_centerHorizontal="true"
+                         android:gravity="center"
+                         android:text="Volume = √2/3 × a^3"
+                         android:textColor="@color/grey"
+                         android:textStyle="bold"
+                         android:textSize="17sp"  />
+
+                     <TextView
+                         android:id="@+id/textOctahedron1"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/imageOctahedron"
+                         android:layout_centerHorizontal="true"
+                         android:gravity="center"
+                         android:layout_marginTop="12dp"
+                         android:text="Surface Area = 2 × √3 × a²"
+                         android:textColor="@color/grey"
+                         android:textStyle="bold"
+                         android:textSize="17sp"  />
+
+                     <TextView
+                         android:id="@+id/textOctahedron3"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/textOctahedron2"
+                         android:layout_centerHorizontal="true"
+                         android:gravity="center"
+                         android:text="a = edge length"
+                         android:textColor="@color/grey"
+                         android:textStyle="bold"
+                         android:textSize="17sp"  />
+
+                     <Button
+                         android:id="@+id/buttonOctahedron"
+                         android:layout_width="210dp"
+                         android:layout_height="46dp"
+                         android:background="@drawable/button_custom"
+                         android:textColor="@drawable/button_color_text"
+                         android:layout_below="@+id/editOctahedron1"
+                         android:layout_centerHorizontal="true"
+                         android:textAllCaps="false"
+                         android:text="Calculate"
+                         android:textStyle="bold"
+                         android:textSize="17sp"
+                         android:onClick="calculate11"/>
+
+                     <EditText
+                         android:id="@+id/editOctahedron1"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/textOctahedron3"
+                         android:layout_alignLeft="@+id/buttonOctahedron"
+                         android:layout_alignRight="@+id/buttonOctahedron"
+                         android:hint="Write number a"
+                         android:ems="10"
+                         android:inputType="numberDecimal"
+                         android:textSize="15sp"
+                         android:textStyle="italic"
+                         android:textColor="@color/grey"
+                         android:textColorHint="@color/hintcolor"
+                         android:gravity="center"/>
+
+                     <TextView
+                         android:id="@+id/textOctahedron4"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/buttonOctahedron"
+                         android:layout_centerHorizontal="true"
+                         android:layout_marginTop="6dp"
+                         android:textStyle="bold"
+                         android:textSize="17sp"
+                         android:gravity="center"
+                         android:textColor="@color/holo_green_dark"
+                         android:textIsSelectable="true"/>
+
+                     <ImageButton
+                         android:id="@+id/moreButton11"
+                         android:layout_width="30dp"
+                         android:layout_height="30dp"
+                         android:layout_alignParentRight="true"
+                         android:layout_below="@+id/textOctahedron4"
+                         android:layout_marginTop="4dp"
+                         android:layout_marginBottom="7dp"
+                         android:layout_marginRight="0dp"
+                         android:background="@drawable/button_more_green"
+                         android:onClick="moreButtonClick11" />
+
+                     <ImageView
+                         android:id="@+id/imageOctahedron"
+                         android:layout_width="wrap_content"
+                         android:layout_height="85dp"
+                         android:layout_marginTop="12dp"
+                         android:layout_below="@+id/Octahedron"
+                         android:layout_centerHorizontal="true"
+                         android:src="@drawable/octahedron" />
+
+                     <Button
+                         android:id="@+id/ShareOctahedron"
+                         android:layout_width="60dp"
+                         android:layout_height="wrap_content"
+                         android:layout_alignBottom="@+id/buttonOctahedron"
+                         android:layout_alignTop="@+id/buttonOctahedron"
+                         android:layout_toRightOf="@+id/buttonOctahedron"
+                         android:background="@drawable/button_share2"
+                         android:onClick="share11" />
+
+                 </RelativeLayout>
+         </android.support.v7.widget.CardView>
+         </android.support.v7.widget.CardView>
+
+         <android.support.v7.widget.CardView
+             xmlns:card_view="http://schemas.android.com/apk/res-auto"
+             card_view:cardBackgroundColor="@color/holo_green_dark"
+             card_view:cardElevation="2dp"
+             card_view:cardCornerRadius="2dp"
+             card_view:cardPreventCornerOverlap="false"
+             card_view:cardUseCompatPadding="true"
+             card_view:contentPaddingRight="-2.5dp"
+             card_view:contentPaddingLeft="-2.5dp"
+             card_view:contentPaddingTop="6dp"
+             card_view:contentPaddingBottom="-4dp"
+             android:id="@+id/upBorder12"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_below="@+id/upBorder11"
+             android:layout_centerHorizontal="true"
+             android:layout_marginTop="6dp" >
+
+         <android.support.v7.widget.CardView
+             xmlns:card_view="http://schemas.android.com/apk/res-auto"
+             card_view:cardBackgroundColor="@color/white_grey"
+             card_view:cardElevation="0dp"
+             card_view:cardCornerRadius="2dp"
+             card_view:cardPreventCornerOverlap="false"
+             card_view:cardUseCompatPadding="true"
+             card_view:contentPaddingRight="0dp"
+             card_view:contentPaddingLeft="0dp"
+             card_view:contentPaddingTop="0dp"
+             card_view:contentPaddingBottom="2dp"
+                 android:id="@+id/downBorder12"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_centerHorizontal="true">
+
+                 <RelativeLayout
+                     android:id="@+id/relativeLayout12"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_centerHorizontal="true"
+                     android:background="@color/white_grey"
+                     android:paddingLeft="7dp"
+                     android:paddingRight="7dp" >
+
+                     <TextView
+                         android:id="@+id/Dodecahedron"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_alignParentTop="true"
+                         android:layout_centerHorizontal="true"
+                         android:layout_marginTop="7dp"
+                         android:text="Regular Dodecahedron"
+                         android:textColor="@color/holo_green_dark"
+                         android:textSize="20sp"
+                         android:textStyle="bold" />
+
+                     <TextView
+                         android:id="@+id/textDodecahedron2"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/textDodecahedron1"
+                         android:layout_centerHorizontal="true"
+                         android:gravity="center"
+                         android:text="Volume = ¼ × (15 + 7√5) × a^3"
+                         android:textColor="@color/grey"
+                         android:textStyle="bold"
+                         android:textSize="17sp"  />
+
+                     <TextView
+                         android:id="@+id/textDodecahedron1"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/imageDodecahedron"
+                         android:layout_centerHorizontal="true"
+                         android:layout_marginTop="12dp"
+                         android:text="Surface Area = 3 × √(25 + 10√5) × a²"
+                         android:textColor="@color/grey"
+                         android:gravity="center"
+                         android:textStyle="bold"
+                         android:textSize="17sp"  />
+
+                     <TextView
+                         android:id="@+id/textDodecahedron3"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/textDodecahedron2"
+                         android:layout_centerHorizontal="true"
+                         android:gravity="center"
+                         android:text="a = edge length"
+                         android:textColor="@color/grey"
+                         android:textStyle="bold"
+                         android:textSize="17sp"  />
+
+                     <Button
+                         android:id="@+id/buttonDodecahedron"
+                         android:layout_width="210dp"
+                         android:layout_height="46dp"
+                         android:background="@drawable/button_custom"
+                         android:textColor="@drawable/button_color_text"
+                         android:layout_below="@+id/editDodecahedron1"
+                         android:layout_centerHorizontal="true"
+                         android:textAllCaps="false"
+                         android:text="Calculate"
+                         android:textStyle="bold"
+                         android:textSize="17sp"
+                         android:onClick="calculate12"/>
+
+                     <EditText
+                         android:id="@+id/editDodecahedron1"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/textDodecahedron3"
+                         android:layout_alignLeft="@+id/buttonDodecahedron"
+                         android:layout_alignRight="@+id/buttonDodecahedron"
+                         android:hint="Write number a"
+                         android:ems="10"
+                         android:inputType="numberDecimal"
+                         android:textSize="15sp"
+                         android:textStyle="italic"
+                         android:textColor="@color/grey"
+                         android:textColorHint="@color/hintcolor"
+                         android:gravity="center"/>
+
+                     <TextView
+                         android:id="@+id/textDodecahedron4"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/buttonDodecahedron"
+                         android:layout_centerHorizontal="true"
+                         android:layout_marginTop="6dp"
+                         android:textStyle="bold"
+                         android:textSize="17sp"
+                         android:gravity="center"
+                         android:textColor="@color/holo_green_dark"
+                         android:textIsSelectable="true"/>
+
+                     <ImageButton
+                         android:id="@+id/moreButton12"
+                         android:layout_width="30dp"
+                         android:layout_height="30dp"
+                         android:layout_alignParentRight="true"
+                         android:layout_below="@+id/textDodecahedron4"
+                         android:layout_marginTop="4dp"
+                         android:layout_marginBottom="7dp"
+                         android:layout_marginRight="0dp"
+                         android:background="@drawable/button_more_green"
+                         android:onClick="moreButtonClick12" />
+
+                     <ImageView
+                         android:id="@+id/imageDodecahedron"
+                         android:layout_width="wrap_content"
+                         android:layout_height="85dp"
+                         android:layout_marginTop="12dp"
+                         android:layout_below="@+id/Dodecahedron"
+                         android:layout_centerHorizontal="true"
+                         android:src="@drawable/dodecahedron" />
+
+                     <Button
+                         android:id="@+id/ShareDodecahedron"
+                         android:layout_width="60dp"
+                         android:layout_height="wrap_content"
+                         android:layout_alignBottom="@+id/buttonDodecahedron"
+                         android:layout_alignTop="@+id/buttonDodecahedron"
+                         android:layout_toRightOf="@+id/buttonDodecahedron"
+                         android:background="@drawable/button_share2"
+                         android:onClick="share12" />
+
+                 </RelativeLayout>
+         </android.support.v7.widget.CardView>
+         </android.support.v7.widget.CardView>
+
+         <android.support.v7.widget.CardView
+             xmlns:card_view="http://schemas.android.com/apk/res-auto"
+             card_view:cardBackgroundColor="@color/holo_green_dark"
+             card_view:cardElevation="2dp"
+             card_view:cardCornerRadius="2dp"
+             card_view:cardPreventCornerOverlap="false"
+             card_view:cardUseCompatPadding="true"
+             card_view:contentPaddingRight="-2.5dp"
+             card_view:contentPaddingLeft="-2.5dp"
+             card_view:contentPaddingTop="6dp"
+             card_view:contentPaddingBottom="-4dp"
+             android:id="@+id/upBorder13"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_below="@+id/upBorder12"
+             android:layout_centerHorizontal="true"
+             android:layout_marginTop="6dp"
+             android:layout_marginBottom="10dp" >
+
+         <android.support.v7.widget.CardView
+             xmlns:card_view="http://schemas.android.com/apk/res-auto"
+             card_view:cardBackgroundColor="@color/white_grey"
+             card_view:cardElevation="0dp"
+             card_view:cardCornerRadius="2dp"
+             card_view:cardPreventCornerOverlap="false"
+             card_view:cardUseCompatPadding="true"
+             card_view:contentPaddingRight="0dp"
+             card_view:contentPaddingLeft="0dp"
+             card_view:contentPaddingTop="0dp"
+             card_view:contentPaddingBottom="2dp"
+                 android:id="@+id/downBorder13"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_centerHorizontal="true" >
+
+                 <RelativeLayout
+                     android:id="@+id/relativeLayout13"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_centerHorizontal="true"
+                     android:background="@color/white_grey"
+                     android:paddingLeft="7dp"
+                     android:paddingRight="7dp" >
+
+                     <TextView
+                         android:id="@+id/Icosahedron"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_alignParentTop="true"
+                         android:layout_centerHorizontal="true"
+                         android:layout_marginTop="7dp"
+                         android:text="Regular Icosahedron"
+                         android:textColor="@color/holo_green_dark"
+                         android:textSize="20sp"
+                         android:textStyle="bold" />
+
+                     <TextView
+                         android:id="@+id/textIcosahedron2"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/textIcosahedron1"
+                         android:layout_centerHorizontal="true"
+                         android:gravity="center"
+                         android:text="Volume = 5/12 × (3 + √5) × a^3"
+                         android:textColor="@color/grey"
+                         android:textStyle="bold"
+                         android:textSize="17sp" />
+
+                     <TextView
+                         android:id="@+id/textIcosahedron1"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/imageIcosahedron"
+                         android:layout_centerHorizontal="true"
+                         android:gravity="center"
+                         android:layout_marginTop="12dp"
+                         android:text="Surface Area = 5 × √3 × a²"
+                         android:textColor="@color/grey"
+                         android:textStyle="bold"
+                         android:textSize="17sp"/>
+
+                     <TextView
+                         android:id="@+id/textIcosahedron3"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/textIcosahedron2"
+                         android:layout_centerHorizontal="true"
+                         android:gravity="center"
+                         android:text="a = edge length"
+                         android:textColor="@color/grey"
+                         android:textStyle="bold"
+                         android:textSize="17sp" />
+
+                     <Button
+                         android:id="@+id/buttonIcosahedron"
+                         android:layout_width="210dp"
+                         android:layout_height="46dp"
+                         android:background="@drawable/button_custom"
+                         android:textColor="@drawable/button_color_text"
+                         android:layout_below="@+id/editIcosahedron1"
+                         android:layout_centerHorizontal="true"
+                         android:textAllCaps="false"
+                         android:text="Calculate"
+                         android:textStyle="bold"
+                         android:textSize="17sp"
+                         android:onClick="calculate13"/>
+
+                     <EditText
+                         android:id="@+id/editIcosahedron1"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/textIcosahedron3"
+                         android:layout_alignLeft="@+id/buttonIcosahedron"
+                         android:layout_alignRight="@+id/buttonIcosahedron"
+                         android:hint="Write number a"
+                         android:ems="10"
+                         android:inputType="numberDecimal"
+                         android:textSize="15sp"
+                         android:textStyle="italic"
+                         android:textColor="@color/grey"
+                         android:textColorHint="@color/hintcolor"
+                         android:gravity="center"/>
+
+                     <TextView
+                         android:id="@+id/textIcosahedron4"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/buttonIcosahedron"
+                         android:layout_centerHorizontal="true"
+                         android:layout_marginTop="6dp"
+                         android:textStyle="bold"
+                         android:textSize="17sp"
+                         android:gravity="center"
+                         android:textColor="@color/holo_green_dark"
+                         android:textIsSelectable="true"/>
+
+                     <ImageButton
+                         android:id="@+id/moreButton13"
+                         android:layout_width="30dp"
+                         android:layout_height="30dp"
+                         android:layout_alignParentRight="true"
+                         android:layout_below="@+id/textIcosahedron4"
+                         android:layout_marginTop="4dp"
+                         android:layout_marginBottom="7dp"
+                         android:layout_marginRight="0dp"
+                         android:background="@drawable/button_more_green"
+                         android:onClick="moreButtonClick13" />
+
+                     <ImageView
+                         android:id="@+id/imageIcosahedron"
+                         android:layout_width="wrap_content"
+                         android:layout_height="85dp"
+                         android:layout_marginTop="12dp"
+                         android:layout_below="@+id/Icosahedron"
+                         android:layout_centerHorizontal="true"
+                         android:src="@drawable/icosahedron" />
+
+                     <Button
+                         android:id="@+id/ShareIcosahedron"
+                         android:layout_width="60dp"
+                         android:layout_height="wrap_content"
+                         android:layout_alignBottom="@+id/buttonIcosahedron"
+                         android:layout_alignTop="@+id/buttonIcosahedron"
+                         android:layout_toRightOf="@+id/buttonIcosahedron"
+                         android:background="@drawable/button_share2"
+                         android:onClick="share13" />
+
+                 </RelativeLayout>
+         </android.support.v7.widget.CardView>
+         </android.support.v7.widget.CardView>
+
+
+  </RelativeLayout>
+</ScrollView>

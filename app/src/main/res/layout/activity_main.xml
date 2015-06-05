@@ -1,0 +1,82 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/lightgrey"  
+    tools:context="com.dimitriskatsikas.mathtools.MainActivity" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="214dp"
+                android:layout_height="69dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_top1"
+                android:background="@drawable/button_combinatorics"
+                android:onClick="FactorialClick"
+                android:text="@string/title_activity_factorials_combinations"
+                android:textColor="@drawable/button_color_text2"
+                android:textSize="19dp"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:gravity="left|center"
+                android:paddingLeft="12dp" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="214dp"
+                android:layout_height="69dp"
+                android:layout_below="@+id/button1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_geometric"
+                android:onClick="VolumeClick"
+                android:text="@string/title_activity_volumes_surfaces"
+                android:textColor="@drawable/button_color_text2"
+                android:textSize="19dp"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:paddingLeft="12dp"
+                android:paddingRight="18dp"
+                android:gravity="left|center" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="214dp"
+                android:layout_height="69dp"
+                android:layout_below="@+id/button2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_numbers"
+                android:text="@string/title_activity_numbers"
+                android:textColor="@drawable/button_color_text2"
+                android:textSize="19dp"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:onClick="NumbersClick"
+                android:gravity="left|center"
+                android:paddingLeft="12dp" />
+            
+        </RelativeLayout>
+    </ScrollView>
+    
+           <ImageButton
+                android:id="@+id/aboutButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="25dp"
+                android:layout_marginRight="20dp"
+                android:onClick="AboutClick"
+                android:background="@drawable/button_about" />
+</RelativeLayout>
+

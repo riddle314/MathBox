@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/C:/Users/Dimitris/AndroidstudioProjects/MathTools/app/src/main/res/values-h550dp/dimens.xml -->
+    <eat-comment/>
+    <dimen name="margin_top1">90dp</dimen>
+    <dimen name="margin_top2">50dp</dimen>
+</resources>

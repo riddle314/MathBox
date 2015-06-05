@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name" translatable="false">MathBox</string>
+    <string name="action_settings" translatable="false">Settings</string>
+    <string name="title_activity_factorials_combinations" translatable="false">Combinatorics</string>
+    <string name="title_activity_volumes_surfaces" translatable="false">Geometric Shapes</string>
+    <string name="title_activity_two_dimensional_shapes" translatable="false">Two Dimensional Shapes</string>
+    <string name="title_activity_three_dimensional_shapes" translatable="false">Three Dimensional Shapes</string>
+    <string name="title_activity_about" translatable="false">About</string>
+    <string name="title_activity_numbers" translatable="false">Numbers</string>
+    <string name="calculate_button" translatable="false">Calculate</string>
+    <string name="convert_button" translatable="false">Convert</string>
+    <string name="check_button" translatable="false">Check</string>
+    <string name="combinatorics_title1" translatable="false">♠ Permutations of n items / Factorial of n:</string>
+    <string name="combinatorics_title2" translatable="false">♥ Permutations of k items taken from n items:</string>
+    <string name="combinatorics_title3" translatable="false">♣ Permutations of k items taken from n items, where each item can be taken more than one:</string>
+    <string name="combinatorics_title4" translatable="false">♦ Combinations of k items taken from n items / Binomial coefficient:</string>
+    <string name="combinatorics_title5" translatable="false">♣ Combinations of k items taken from n items, where each item can be taken more than one:</string>
+    <string name="combinatorics_editn" translatable="false">Write number n</string>
+    <string name="combinatorics_editk" translatable="false">Write number k</string>
+    <string name="combinatorics_editk2" translatable="false">Write number k  (k ≤ n)</string>
+    <string name="combinatorics_formula1" translatable="false">The formula is n!</string>
+    <string name="combinatorics_formula2" translatable="false">The formula is n! ÷ (n-k)!</string>
+    <string name="combinatorics_formula3" translatable="false">The formula is n^k</string>
+    <string name="combinatorics_formula4" translatable="false">The formula is n! ÷ k!(n-k)!</string>
+    <string name="combinatorics_formula5" translatable="false">The formula is (n+k-1)! ÷ k!(n-1)!</string>
+    <string name="numbers_edit" translatable="false">Write number</string>
+    <string name="numbers_editn" translatable="false">Write number n</string>
+    <string name="shapes2D" translatable="false">2D Shapes</string>
+    <string name="shapes3D" translatable="false">3D Shapes</string>
+    <string name="version" translatable="false">Version: 1.0</string>
+    <string name="createdby" translatable="false">Created by</string>
+    <string name="contents" translatable="false">Contents:</string>
+    <string name="about1" translatable="false">► Combinatorics</string>
+    <string name="about1.1" translatable="false">• 5 combinatorics formulas</string>
+    <string name="about2" translatable="false">► Geometric Shapes</string>
+    <string name="about3" translatable="false">►► 2D Shapes</string>
+    <string name="about3.1" translatable="false">• Circle</string>
+
+</resources>

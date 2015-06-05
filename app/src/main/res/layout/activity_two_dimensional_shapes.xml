@@ -1,0 +1,1825 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/lightgrey"
+    tools:context="com.dimitriskatsikas.mathtools.TwoDimensionalShapesActivity" >
+
+ 
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin">
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            card_view:cardBackgroundColor="@color/holo_green_dark"
+            card_view:cardElevation="2dp"
+            card_view:cardCornerRadius="2dp"
+            card_view:cardPreventCornerOverlap="false"
+            card_view:cardUseCompatPadding="true"
+            card_view:contentPaddingRight="-2.5dp"
+            card_view:contentPaddingLeft="-2.5dp"
+            card_view:contentPaddingTop="6dp"
+            card_view:contentPaddingBottom="-4dp"
+            android:id="@+id/upBorder1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp" >
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            card_view:cardBackgroundColor="@color/white_grey"
+            card_view:cardElevation="0dp"
+            card_view:cardCornerRadius="2dp"
+            card_view:cardPreventCornerOverlap="false"
+            card_view:cardUseCompatPadding="true"
+            card_view:contentPaddingRight="0dp"
+            card_view:contentPaddingLeft="0dp"
+            card_view:contentPaddingTop="0dp"
+            card_view:contentPaddingBottom="2dp"
+            android:id="@+id/downBorder1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true" >
+
+          <RelativeLayout
+              android:id="@+id/relativeLayout1"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_centerHorizontal="true"
+              android:background="@color/white_grey"
+              android:paddingLeft="7dp"
+              android:paddingRight="7dp" >
+
+              <TextView
+                  android:id="@+id/title1"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentTop="true"
+                  android:layout_centerHorizontal="true"
+                  android:layout_marginTop="7dp"
+                  android:text="Circle"
+                  android:textColor="@color/holo_green_dark"
+                  android:textSize="20sp"
+                  android:textStyle="bold" />
+
+              <TextView
+                  android:id="@+id/textCircle2"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/textCircle1"
+                  android:layout_alignRight="@+id/editCircle1"
+                  android:text="Area = π × r²"
+                  android:textColor="@color/grey"
+                  android:textAppearance="?android:attr/textAppearanceMedium"
+                  android:textStyle="bold"
+                  android:textSize="17sp" />
+
+              <TextView
+                  android:id="@+id/textCircle1"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/title1"
+                  android:layout_alignRight="@+id/editCircle1"
+                  android:layout_marginTop="12dp"
+                  android:text="Circumference = 2 × π × r"
+                  android:textColor="@color/grey"
+                  android:textAppearance="?android:attr/textAppearanceMedium"
+                  android:textStyle="bold"
+                  android:textSize="17sp" />
+
+              <TextView
+                  android:id="@+id/textCircle3"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/textCircle2"
+                  android:layout_alignRight="@+id/editCircle1"
+                  android:text="π = 3.14159..."
+                  android:textColor="@color/grey"
+                  android:textAppearance="?android:attr/textAppearanceMedium"
+                  android:textStyle="bold"
+                  android:textSize="17sp" />
+
+              <Button
+                  android:id="@+id/buttonCircle"
+                  android:layout_width="210dp"
+                  android:layout_height="46dp"
+                  android:background="@drawable/button_custom"
+                  android:textColor="@drawable/button_color_text"
+                  android:layout_below="@+id/editCircle1"
+                  android:layout_centerHorizontal="true"
+                  android:textAllCaps="false"
+                  android:text="@string/calculate_button"
+                  android:textStyle="bold" 
+                  android:onClick="calculate1"
+                  android:textSize="17sp"/>
+              
+              <EditText
+                  android:id="@+id/editCircle1"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/textCircle4"
+                  android:layout_alignLeft="@+id/buttonCircle"
+                  android:layout_alignRight="@+id/buttonCircle"
+                  android:hint="Write number r"
+                  android:ems="10"
+                  android:inputType="numberDecimal" 
+                  android:textSize="15sp"
+                  android:textStyle="italic"
+                  android:textColor="@color/grey"
+                  android:textColorHint="@color/hintcolor"
+                  android:gravity="center" />
+              
+              <TextView
+                  android:id="@+id/textCircle5"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/buttonCircle"
+                  android:layout_centerHorizontal="true"
+                  android:layout_marginTop="6dp"
+                  android:textAppearance="?android:attr/textAppearanceMedium"
+                  android:textColor="@color/holo_green_dark"
+                  android:textIsSelectable="true"
+                  android:textStyle="bold"
+                  android:textSize="17sp"
+                  android:gravity="center"/>
+
+              <ImageView
+                  android:id="@+id/imageView1"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_above="@+id/editCircle1"
+                  android:layout_alignTop="@+id/textCircle2"
+                  android:layout_toLeftOf="@+id/title1"
+                  android:src="@drawable/circle" />
+
+              <TextView
+                  android:id="@+id/textCircle4"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignRight="@+id/textCircle3"
+                  android:layout_below="@+id/textCircle3"
+                  android:text="r = radius"
+                  android:textColor="@color/grey"
+                  android:textAppearance="?android:attr/textAppearanceMedium"
+                  android:textStyle="bold"
+                  android:textSize="17sp" />
+              
+              <Button
+                  android:id="@+id/ShareButton1"
+                  android:layout_width="60dp"
+                  android:layout_height="wrap_content"
+                  android:layout_alignBottom="@+id/buttonCircle"
+                  android:layout_alignTop="@+id/buttonCircle"
+                  android:layout_toRightOf="@+id/buttonCircle"
+                  android:background="@drawable/button_share2"
+                  android:onClick="share1" />
+              
+              <ImageButton
+                android:id="@+id/moreButton1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/textCircle5"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="7dp"
+                android:layout_marginRight="0dp"
+                android:background="@drawable/button_more_green"
+                android:onClick="moreButtonClick1" />
+
+          </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            card_view:cardBackgroundColor="@color/holo_green_dark"
+            card_view:cardElevation="2dp"
+            card_view:cardCornerRadius="2dp"
+            card_view:cardPreventCornerOverlap="false"
+            card_view:cardUseCompatPadding="true"
+            card_view:contentPaddingRight="-2.5dp"
+            card_view:contentPaddingLeft="-2.5dp"
+            card_view:contentPaddingTop="6dp"
+            card_view:contentPaddingBottom="-4dp"
+            android:id="@+id/upBorder9"
+            android:layout_below="@+id/upBorder1"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_centerHorizontal="true"
+           android:layout_marginTop="6dp" >
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            card_view:cardBackgroundColor="@color/white_grey"
+            card_view:cardElevation="0dp"
+            card_view:cardCornerRadius="2dp"
+            card_view:cardPreventCornerOverlap="false"
+            card_view:cardUseCompatPadding="true"
+            card_view:contentPaddingRight="0dp"
+            card_view:contentPaddingLeft="0dp"
+            card_view:contentPaddingTop="0dp"
+            card_view:contentPaddingBottom="2dp"
+             android:id="@+id/downBorder9"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_centerHorizontal="true">
+
+         <RelativeLayout
+             android:id="@+id/relativeLayout9"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_centerHorizontal="true"
+             android:background="@color/white_grey"
+             android:paddingLeft="7dp"
+             android:paddingRight="7dp" >
+
+             <TextView
+                 android:id="@+id/title9"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentTop="true"
+                 android:layout_centerHorizontal="true"
+                 android:layout_marginTop="7dp"
+                 android:text="Convert Radians / Degrees"
+                 android:textColor="@color/holo_green_dark"
+                 android:textSize="20sp"
+                 android:textStyle="bold" />
+             
+             <TextView
+                 android:id="@+id/titleConvert1"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@+id/title9"
+                 android:layout_centerHorizontal="true"
+                 android:layout_marginTop="12dp"
+                 android:text="Radians to Degrees"
+                 android:textColor="@color/grey"
+                 android:textStyle="bold"
+                 android:textSize="20sp" />
+
+             <TextView
+                 android:id="@+id/textConvert1"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@+id/titleConvert1"
+                 android:layout_centerHorizontal="true"
+                 android:layout_marginTop="7dp"
+                 android:text="Degrees = (180/π) × θ"
+                 android:textColor="@color/grey"
+                 android:textStyle="bold"
+                 android:textSize="17sp" />
+
+             <TextView
+                 android:id="@+id/textConvert2"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@+id/textConvert1"
+                 android:layout_centerHorizontal="true"
+                 android:text="θ = angle in radians"
+                 android:textColor="@color/grey"
+                 android:textStyle="bold"
+                 android:textSize="17sp" />
+
+             <TextView
+                 android:id="@+id/textConvert3"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@+id/textConvert2"
+                 android:layout_centerHorizontal="true"
+                 android:text="π = 3.14159..."
+                 android:textColor="@color/grey"
+                 android:textStyle="bold"
+                 android:textSize="17sp" />
+
+             <TextView
+                 android:id="@+id/titleConvert2"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@+id/imageView9"
+                 android:layout_centerHorizontal="true"
+                 android:layout_marginTop="10dp"
+                 android:text="Degrees to Radians"
+                 android:textColor="@color/grey"
+                 android:textStyle="bold"
+                 android:textSize="20sp"/>
+
+             <TextView
+                 android:id="@+id/textConvert4"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@+id/titleConvert2"
+                 android:layout_centerHorizontal="true"
+                 android:layout_marginTop="7dp"
+                 android:text="Radians = (π/180) × φ"
+                 android:textAppearance="?android:attr/textAppearanceMedium"
+                 android:textColor="@color/grey"
+                 android:textStyle="bold"
+                 android:textSize="17sp" />
+
+             <TextView
+                 android:id="@+id/textConvert5"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@+id/textConvert4"
+                 android:layout_centerHorizontal="true"
+                 android:text="φ = angle in degrees"
+                 android:textColor="@color/grey"
+                 android:textStyle="bold"
+                 android:textSize="17sp" />
+             
+             <TextView
+                 android:id="@+id/textConvert8"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@+id/textConvert5"
+                 android:layout_centerHorizontal="true"
+                 android:text="π = 3.14159..."
+                 android:textColor="@color/grey"
+                 android:textStyle="bold"
+                 android:textSize="17sp" />
+
+             <EditText
+                 android:id="@+id/editConvert1"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignLeft="@+id/buttonConvert1"
+                 android:layout_alignRight="@+id/buttonConvert1"
+                 android:layout_below="@+id/textConvert3"
+                 android:ems="10"
+                 android:hint="Write angle θ in radians"
+                 android:inputType="numberDecimal"
+                 android:textColor="@color/grey"
+                 android:textColorHint="@color/hintcolor"
+                 android:textSize="15sp"
+                 android:textStyle="italic"
+                 android:gravity="center" />
+             
+             <Button
+                 android:id="@+id/buttonConvert1"
+                 android:layout_width="210dp"
+                 android:layout_height="46dp"
+                 android:layout_below="@+id/editConvert1"
+                 android:layout_centerHorizontal="true"
+                 android:background="@drawable/button_custom"
+                 android:textAllCaps="false"
+                 android:text="@string/convert_button"
+                 android:textColor="@drawable/button_color_text"
+                 android:textStyle="bold"
+                 android:textSize="17sp"
+                 android:onClick="calculate9" />
+             
+             <Button
+                 android:id="@+id/ShareButton10"
+                 android:layout_width="60dp"
+                 android:layout_height="wrap_content"
+                 android:layout_alignBottom="@+id/buttonConvert1"
+                 android:layout_alignTop="@+id/buttonConvert1"
+                 android:layout_toRightOf="@+id/buttonConvert1"
+                 android:background="@drawable/button_share2"
+                 android:onClick="share9" />
+             
+             <TextView
+                 android:id="@+id/resultConvert1"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@+id/buttonConvert1"
+                 android:layout_centerHorizontal="true"
+                 android:layout_marginBottom="18dp"
+                 android:layout_marginTop="6dp"
+                 android:textColor="@color/holo_green_dark"
+                 android:text=""
+                 android:gravity="center"
+                 android:textIsSelectable="true"
+                 android:textStyle="bold"
+                 android:textSize="17sp"/>
+             
+             <TextView
+                 android:id="@+id/imageView9"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_centerHorizontal="true"
+                 android:layout_below="@+id/resultConvert1"
+                 android:background="@drawable/line" />
+
+             <EditText
+                 android:id="@+id/editConvert2"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignLeft="@+id/buttonConvert2"
+                 android:layout_alignRight="@+id/buttonConvert2"
+                 android:layout_below="@+id/textConvert8"
+                 android:ems="10"
+                 android:hint="Write angle φ in degrees"
+                 android:inputType="numberDecimal"
+                 android:textColor="@color/grey"
+                 android:textColorHint="@color/hintcolor"
+                 android:textSize="15sp"
+                 android:textStyle="italic"
+                 android:gravity="center" />
+
+             <Button
+                 android:id="@+id/buttonConvert2"
+                 android:layout_width="210dp"
+                 android:layout_height="46dp"
+                 android:layout_below="@+id/editConvert2"
+                 android:layout_centerHorizontal="true"
+                 android:background="@drawable/button_custom"
+                 android:textAllCaps="false"
+                 android:textAppearance="?android:attr/textAppearanceMedium"
+                 android:text="@string/convert_button"
+                 android:textColor="@drawable/button_color_text"
+                 android:textStyle="bold"
+                 android:textSize="17sp"
+                 android:onClick="calculate10" />
+
+             <Button
+                 android:id="@+id/ShareButton2"
+                 android:layout_width="60dp"
+                 android:layout_height="wrap_content"
+                 android:layout_alignBottom="@+id/buttonConvert2"
+                 android:layout_alignTop="@+id/buttonConvert2"
+                 android:layout_toRightOf="@+id/buttonConvert2"
+                 android:background="@drawable/button_share2"
+                 android:onClick="share10" />
+
+             <TextView
+                 android:id="@+id/resultConvert2"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@+id/buttonConvert2"
+                 android:layout_centerHorizontal="true"
+                 android:layout_marginTop="6dp"
+                 android:textColor="@color/holo_green_dark"
+                 android:text=""
+                 android:gravity="center"
+                 android:textIsSelectable="true"
+                 android:textStyle="bold"
+                 android:textSize="17sp"/>
+             
+             <ImageButton
+                android:id="@+id/moreButton2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/resultConvert2"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="7dp"
+                android:layout_marginRight="0dp"
+                android:background="@drawable/button_more_green"
+                android:onClick="moreButtonClick2" />
+
+             
+
+         </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            card_view:cardBackgroundColor="@color/holo_green_dark"
+            card_view:cardElevation="2dp"
+            card_view:cardCornerRadius="2dp"
+            card_view:cardPreventCornerOverlap="false"
+            card_view:cardUseCompatPadding="true"
+            card_view:contentPaddingRight="-2.5dp"
+            card_view:contentPaddingLeft="-2.5dp"
+            card_view:contentPaddingTop="6dp"
+            card_view:contentPaddingBottom="-4dp"
+            android:id="@+id/upBorder2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/upBorder9"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="6dp" >
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            card_view:cardBackgroundColor="@color/white_grey"
+            card_view:cardElevation="0dp"
+            card_view:cardCornerRadius="2dp"
+            card_view:cardPreventCornerOverlap="false"
+            card_view:cardUseCompatPadding="true"
+            card_view:contentPaddingRight="0dp"
+            card_view:contentPaddingLeft="0dp"
+            card_view:contentPaddingTop="0dp"
+            card_view:contentPaddingBottom="2dp"
+             android:id="@+id/downBorder2"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_centerHorizontal="true" >
+         <RelativeLayout
+           android:id="@+id/relativeLayout2"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_centerHorizontal="true"
+           android:paddingLeft="7dp"
+           android:paddingRight="7dp"
+           android:background="@color/white_grey" >
+
+         <TextView
+             android:id="@+id/title2"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentTop="true"
+             android:layout_centerHorizontal="true"
+             android:paddingTop="7dp"
+             android:text="Circular Sector"
+             android:textAppearance="?android:attr/textAppearanceLarge"
+             android:textColor="@color/holo_green_dark"
+             android:textSize="20sp"
+             android:textStyle="bold" />
+
+         <TextView
+                  android:id="@+id/textSector1"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/title2"
+                  android:layout_alignRight="@+id/editSector1"
+                  android:layout_marginTop="12dp"
+                  android:text="Arc length = θ × r"
+                  android:textColor="@color/grey"
+                  android:textAppearance="?android:attr/textAppearanceMedium"
+             android:textStyle="bold"
+             android:textSize="17sp" />
+         <TextView
+                  android:id="@+id/textSector2"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/textSector1"
+                  android:layout_alignRight="@+id/editSector1"
+                  android:text="Area = ½ × θ × r²"
+                  android:textColor="@color/grey"
+                  android:textAppearance="?android:attr/textAppearanceMedium"
+             android:textStyle="bold"
+             android:textSize="17sp" />
+         <TextView
+                  android:id="@+id/textSector3"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/textSector2"
+                  android:layout_alignRight="@+id/editSector1"
+                  android:text="θ = angle in radians"
+                  android:textColor="@color/grey"
+                  android:textAppearance="?android:attr/textAppearanceMedium"
+             android:textStyle="bold"
+             android:textIsSelectable="false"
+             android:textSize="17sp" />
+         <TextView
+                  android:id="@+id/textSector4"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/textSector3"
+                  android:layout_alignRight="@+id/editSector1"
+                  android:text="r = radius"
+                  android:textColor="@color/grey"
+                  android:textAppearance="?android:attr/textAppearanceMedium"
+             android:textStyle="bold"
+             android:textSize="17sp" />
+         <EditText
+                  android:id="@+id/editSector1"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/textSector4"
+                  android:layout_alignLeft="@+id/buttonSector"
+                  android:layout_alignRight="@+id/buttonSector"
+                  android:hint="Write number θ"
+                  android:ems="10"
+                  android:inputType="numberDecimal" 
+                  android:textSize="15sp"
+                  android:textStyle="italic"
+                  android:textColor="@color/grey"
+                  android:textColorHint="@color/hintcolor"
+                  android:gravity="center" />
+         <EditText
+                 android:id="@+id/editSector2"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignLeft="@+id/buttonSector"
+                 android:layout_alignRight="@+id/buttonSector"
+                 android:layout_below="@+id/editSector1"
+                 android:ems="10"
+                 android:hint="Write number r"
+                 android:inputType="numberDecimal"
+                 android:textSize="15sp"
+                 android:textStyle="italic"
+                 android:textColor="@color/grey"
+                 android:textColorHint="@color/hintcolor"
+                 android:gravity="center" />
+         <Button
+                  android:id="@+id/buttonSector"
+                  android:layout_width="210dp"
+                  android:layout_height="46dp"
+                  android:background="@drawable/button_custom"
+                  android:textColor="@drawable/button_color_text"
+                  android:layout_below="@+id/editSector2"
+                  android:layout_centerHorizontal="true"
+                  android:textAllCaps="false"
+                  android:text="@string/calculate_button"
+                  android:textStyle="bold"
+                  android:textSize="17sp"
+                  android:onClick="calculate2" />
+         <Button
+                  android:id="@+id/ShareButton9"
+                  android:layout_width="60dp"
+                  android:layout_height="wrap_content"
+                  android:layout_alignBottom="@+id/buttonSector"
+                  android:layout_alignTop="@+id/buttonSector"
+                  android:layout_toRightOf="@+id/buttonSector"
+                  android:background="@drawable/button_share2"
+                  android:onClick="share2" />
+         <TextView
+                  android:id="@+id/textSector5"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/buttonSector"
+                  android:layout_centerHorizontal="true"
+                  android:layout_marginTop="6dp"
+                  android:textAppearance="?android:attr/textAppearanceMedium"
+                  android:textColor="@color/holo_green_dark"
+                  android:textIsSelectable="true"
+                  android:textStyle="bold"
+                  android:textSize="17sp"
+                  android:gravity="center"/>
+         
+         <ImageButton
+                android:id="@+id/moreButton3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/textSector5"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="7dp"
+                android:layout_marginRight="0dp"
+                android:background="@drawable/button_more_green"
+                android:onClick="moreButtonClick3" />
+         
+
+         <ImageView
+             android:id="@+id/imageView2"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignBottom="@+id/textSector3"
+             android:layout_alignTop="@+id/textSector1"
+             android:layout_toLeftOf="@+id/textSector1"
+             android:src="@drawable/sector" />
+         
+          </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            card_view:cardBackgroundColor="@color/holo_green_dark"
+            card_view:cardElevation="2dp"
+            card_view:cardCornerRadius="2dp"
+            card_view:cardPreventCornerOverlap="false"
+            card_view:cardUseCompatPadding="true"
+            card_view:contentPaddingRight="-2.5dp"
+            card_view:contentPaddingLeft="-2.5dp"
+            card_view:contentPaddingTop="6dp"
+            card_view:contentPaddingBottom="-4dp"
+            android:id="@+id/upBorder3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/upBorder2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="6dp" >
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            card_view:cardBackgroundColor="@color/white_grey"
+            card_view:cardElevation="0dp"
+            card_view:cardCornerRadius="2dp"
+            card_view:cardPreventCornerOverlap="false"
+            card_view:cardUseCompatPadding="true"
+            card_view:contentPaddingRight="0dp"
+            card_view:contentPaddingLeft="0dp"
+            card_view:contentPaddingTop="0dp"
+            card_view:contentPaddingBottom="2dp"
+             android:id="@+id/downBorder3"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_centerHorizontal="true" >
+         <RelativeLayout
+           android:id="@+id/relativeLayout3"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_centerHorizontal="true"
+           android:paddingLeft="7dp"
+           android:paddingRight="7dp"
+           android:background="@color/white_grey"  >
+
+         <TextView
+             android:id="@+id/title3"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentTop="true"
+             android:layout_centerHorizontal="true"
+             android:paddingTop="7dp"
+             android:text="Ellipse"
+             android:textColor="@color/holo_green_dark"
+             android:textSize="20sp"
+             android:textStyle="bold" />
+
+         <EditText
+                 android:id="@+id/editEllipse1"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignLeft="@+id/editEllipse2"
+                 android:layout_alignRight="@+id/editEllipse2"
+                 android:layout_below="@+id/textEllipse4"
+                 android:ems="10"
+                 android:hint="Write number a"
+                 android:inputType="numberDecimal"
+                 android:textSize="15sp"
+                 android:textStyle="italic"
+                 android:textColor="@color/grey"
+                 android:textColorHint="@color/hintcolor"
+                 android:gravity="center" />
+
+             <EditText
+                 android:id="@+id/editEllipse2"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignLeft="@+id/buttonEllipse"
+                 android:layout_alignRight="@+id/buttonEllipse"
+                 android:layout_below="@+id/editEllipse1"
+                 android:ems="10"
+                 android:hint="Write number b"
+                 android:inputType="numberDecimal"
+                 android:textSize="15sp"
+                 android:textStyle="italic"
+                 android:textColor="@color/grey"
+                 android:textColorHint="@color/hintcolor"
+                 android:gravity="center" />
+
+             <Button
+                 android:id="@+id/buttonEllipse"
+                 android:layout_width="210dp"
+                 android:layout_height="46dp"
+                 android:background="@drawable/button_custom"
+                 android:textColor="@drawable/button_color_text"
+                 android:layout_below="@+id/editEllipse2"
+                 android:layout_centerHorizontal="true"
+                 android:textAllCaps="false"
+                 android:text="@string/calculate_button"
+                 android:textStyle="bold"
+                 android:textSize="17sp"
+                 android:onClick="calculate3" />
+
+             <TextView
+                 android:id="@+id/textEllipse5"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@+id/buttonEllipse"
+                 android:layout_centerHorizontal="true"
+                 android:layout_marginTop="6dp"
+                 android:textAppearance="?android:attr/textAppearanceMedium"
+                 android:textColor="@color/holo_green_dark"
+                 android:textIsSelectable="true"
+                 android:textStyle="bold"
+                 android:textSize="17sp"
+                 android:gravity="center"/>
+             
+             <ImageButton
+                android:id="@+id/moreButton4"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/textEllipse5"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="7dp"
+                android:layout_marginRight="0dp"
+                android:background="@drawable/button_more_green"
+                android:onClick="moreButtonClick4" />
+
+             <ImageView
+                 android:id="@+id/imageView3"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignBottom="@+id/textEllipse3"
+                 android:layout_alignTop="@+id/textEllipse1"
+                 android:layout_toLeftOf="@+id/title3"
+                 android:src="@drawable/ellipse" />
+
+             <TextView
+                 android:id="@+id/textEllipse1"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignRight="@+id/editEllipse1"
+                 android:layout_below="@+id/title3"
+                 android:layout_marginTop="12dp"
+                 android:text="Area = π × a × b"
+                 android:textColor="@color/grey"
+                 android:textAppearance="?android:attr/textAppearanceMedium"
+                 android:textStyle="bold"
+                 android:textSize="17sp" />
+             
+             <TextView
+                 android:id="@+id/textEllipse2"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignRight="@+id/editEllipse1"
+                 android:layout_below="@+id/textEllipse1"
+                 android:text="π = 3.14159..."
+                 android:textColor="@color/grey"
+                 android:textAppearance="?android:attr/textAppearanceMedium"
+                 android:textStyle="bold"
+                 android:textSize="17sp" />
+
+             <TextView
+                 android:id="@+id/textEllipse3"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignRight="@+id/editEllipse1"
+                 android:layout_below="@+id/textEllipse2"
+                 android:text="a= ½ of minor axis"
+                 android:textColor="@color/grey"
+                 android:textAppearance="?android:attr/textAppearanceMedium"
+                 android:textStyle="bold"
+                 android:textSize="17sp" />
+
+             <TextView
+                 android:id="@+id/textEllipse4"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignRight="@+id/editEllipse1"
+                 android:layout_below="@+id/textEllipse3"
+                 android:text="b= ½ of major axis"
+                 android:textColor="@color/grey"
+                 android:textAppearance="?android:attr/textAppearanceMedium"
+                 android:textStyle="bold"
+                 android:textSize="17sp" />
+             
+             <Button
+              android:id="@+id/ShareButton3"
+              android:layout_width="60dp"
+              android:layout_height="wrap_content"
+              android:layout_alignTop="@+id/buttonEllipse"
+              android:layout_alignBottom="@+id/buttonEllipse"
+              android:layout_toRightOf="@+id/buttonEllipse"
+              android:background="@drawable/button_share2"
+              android:onClick="share3"
+              />
+
+          </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            card_view:cardBackgroundColor="@color/holo_green_dark"
+            card_view:cardElevation="2dp"
+            card_view:cardCornerRadius="2dp"
+            card_view:cardPreventCornerOverlap="false"
+            card_view:cardUseCompatPadding="true"
+            card_view:contentPaddingRight="-2.5dp"
+            card_view:contentPaddingLeft="-2.5dp"
+            card_view:contentPaddingTop="6dp"
+            card_view:contentPaddingBottom="-4dp"
+            android:id="@+id/upBorder4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/upBorder3"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="6dp" >
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            card_view:cardBackgroundColor="@color/white_grey"
+            card_view:cardElevation="0dp"
+            card_view:cardCornerRadius="2dp"
+            card_view:cardPreventCornerOverlap="false"
+            card_view:cardUseCompatPadding="true"
+            card_view:contentPaddingRight="0dp"
+            card_view:contentPaddingLeft="0dp"
+            card_view:contentPaddingTop="0dp"
+            card_view:contentPaddingBottom="2dp"
+             android:id="@+id/downBorder4"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_centerHorizontal="true" >
+
+         <RelativeLayout
+             android:id="@+id/relativeLayout4"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_centerHorizontal="true"
+             android:background="@color/white_grey"
+             android:paddingLeft="7dp"
+             android:paddingRight="7dp" >
+
+             <TextView
+                 android:id="@+id/title4"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentTop="true"
+                 android:layout_centerHorizontal="true"
+                 android:paddingTop="7dp"
+                 android:text="Triangle"
+                 android:textColor="@color/holo_green_dark"
+                 android:textSize="20sp"
+                 android:textStyle="bold" />
+
+             <EditText
+                 android:id="@+id/editTriangle1"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignLeft="@+id/editTriangle2"
+                 android:layout_alignRight="@+id/editTriangle2"
+                 android:layout_below="@+id/textTriangle3"
+                 android:ems="10"
+                 android:hint="Write number b"
+                 android:inputType="numberDecimal"
+                 android:textSize="15sp"
+                 android:textStyle="italic"
+                 android:textColor="@color/grey"
+                 android:textColorHint="@color/hintcolor"
+                 android:gravity="center" />
+
+             <EditText
+                 android:id="@+id/editTriangle2"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignLeft="@+id/buttonTriangle"
+                 android:layout_alignRight="@+id/buttonTriangle"
+                 android:layout_below="@+id/editTriangle1"
+                 android:ems="10"
+                 android:hint="Write number h"
+                 android:inputType="numberDecimal"
+                 android:textSize="15sp"
+                 android:textStyle="italic"
+                 android:textColor="@color/grey"
+                 android:textColorHint="@color/hintcolor"
+                 android:gravity="center" />
+
+             <Button
+                 android:id="@+id/buttonTriangle"
+                 android:layout_width="210dp"
+                 android:layout_height="46dp"
+                 android:background="@drawable/button_custom"
+                 android:textColor="@drawable/button_color_text"
+                 android:layout_below="@+id/editTriangle2"
+                 android:layout_centerHorizontal="true"
+                 android:textAllCaps="false"
+                 android:textAppearance="?android:attr/textAppearanceMedium"
+                 android:text="@string/calculate_button"
+                 android:textStyle="bold"
+                 android:textSize="17sp"
+                 android:onClick="calculate4" />
+
+             <TextView
+                 android:id="@+id/textTriangle4"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@+id/buttonTriangle"
+                 android:layout_centerHorizontal="true"
+                 android:layout_marginTop="6dp"
+                 android:textAppearance="?android:attr/textAppearanceMedium"
+                 android:textColor="@color/holo_green_dark"
+                 android:textIsSelectable="true"
+                 android:textSize="17sp"
+                 android:textStyle="bold"
+                 android:gravity="center"/>
+             
+             <ImageButton
+                android:id="@+id/moreButton5"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/textTriangle4"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="7dp"
+                android:layout_marginRight="0dp"
+                android:background="@drawable/button_more_green"
+                android:onClick="moreButtonClick5" />
+
+             <ImageView
+                 android:id="@+id/imageView4"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignBottom="@+id/textTriangle3"
+                 android:layout_alignTop="@+id/textTriangle1"
+                 android:layout_toLeftOf="@+id/textTriangle3"
+                 android:src="@drawable/triangle" />
+
+             <TextView
+                 android:id="@+id/textTriangle1"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignRight="@+id/editTriangle1"
+                 android:layout_below="@+id/title4"
+                 android:layout_marginTop="12dp"
+                 android:text="Area = ½ × b × h"
+                 android:textColor="@color/grey"
+                 android:textAppearance="?android:attr/textAppearanceMedium"
+                 android:textStyle="bold"
+                 android:textSize="17sp" />
+
+             <TextView
+                 android:id="@+id/textTriangle2"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignRight="@+id/editTriangle1"
+                 android:layout_below="@+id/textTriangle1"
+                 android:text="b = base"
+                 android:textColor="@color/grey"
+                 android:textAppearance="?android:attr/textAppearanceMedium"
+                 android:textStyle="bold"
+                 android:textSize="17sp" />
+
+             <TextView
+                 android:id="@+id/textTriangle3"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignRight="@+id/editTriangle1"
+                 android:layout_below="@+id/textTriangle2"
+                 android:text="h = vertical height"
+                 android:textColor="@color/grey"
+                 android:textAppearance="?android:attr/textAppearanceMedium"
+                 android:textStyle="bold"
+                 android:textSize="17sp" />
+             
+             <Button
+              android:id="@+id/ShareButton4"
+              android:layout_width="60dp"
+              android:layout_height="wrap_content"
+              android:layout_alignTop="@+id/buttonTriangle"
+              android:layout_alignBottom="@+id/buttonTriangle"
+              android:layout_toRightOf="@+id/buttonTriangle"
+              android:background="@drawable/button_share2"
+              android:onClick="share4"
+              />
+             
+         </RelativeLayout>
+         </android.support.v7.widget.CardView>
+         </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            card_view:cardBackgroundColor="@color/holo_green_dark"
+            card_view:cardElevation="2dp"
+            card_view:cardCornerRadius="2dp"
+            card_view:cardPreventCornerOverlap="false"
+            card_view:cardUseCompatPadding="true"
+            card_view:contentPaddingRight="-2.5dp"
+            card_view:contentPaddingLeft="-2.5dp"
+            card_view:contentPaddingTop="6dp"
+            card_view:contentPaddingBottom="-4dp"
+            android:id="@+id/upBorder5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/upBorder4"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="6dp">
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            card_view:cardBackgroundColor="@color/white_grey"
+            card_view:cardElevation="0dp"
+            card_view:cardCornerRadius="2dp"
+            card_view:cardPreventCornerOverlap="false"
+            card_view:cardUseCompatPadding="true"
+            card_view:contentPaddingRight="0dp"
+            card_view:contentPaddingLeft="0dp"
+            card_view:contentPaddingTop="0dp"
+            card_view:contentPaddingBottom="2dp"
+             android:id="@+id/downBorder5"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_centerHorizontal="true" >
+         <RelativeLayout
+           android:id="@+id/relativeLayout5"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_centerHorizontal="true"
+           android:paddingLeft="7dp"
+           android:paddingRight="7dp"
+           android:background="@color/white_grey"  >
+
+         <TextView
+             android:id="@+id/title5"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentTop="true"
+             android:layout_centerHorizontal="true"
+             android:paddingTop="7dp"
+             android:text="Square"
+             android:textColor="@color/holo_green_dark"
+             android:textSize="20sp"
+             android:textStyle="bold" />
+         
+         <TextView
+                  android:id="@+id/textSquare2"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/textSquare1"
+                  android:layout_alignRight="@+id/editSquare1"
+                  android:text="a = length of side"
+                  android:textColor="@color/grey"
+                  android:textAppearance="?android:attr/textAppearanceMedium"
+             android:textStyle="bold"
+             android:textSize="17sp" />
+
+              <TextView
+                  android:id="@+id/textSquare1"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/title5"
+                  android:layout_alignRight="@+id/editSquare1"
+                  android:layout_marginTop="12dp"
+                  android:text="Area = a × a"
+                  android:textColor="@color/grey"
+                  android:textAppearance="?android:attr/textAppearanceMedium"
+                  android:textStyle="bold"
+                  android:textSize="17sp" />
+
+              <TextView
+                  android:id="@+id/textSquare3"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/textSquare2"
+                  android:layout_alignRight="@+id/editSquare1"
+                  android:text=""
+                  android:textAppearance="?android:attr/textAppearanceMedium" />
+
+              <Button
+                  android:id="@+id/buttonSquare"
+                  android:layout_width="210dp"
+                  android:layout_height="46dp"
+                  android:background="@drawable/button_custom"
+                  android:textColor="@drawable/button_color_text"
+                  android:layout_below="@+id/editSquare1"
+                  android:layout_centerHorizontal="true"
+                  android:textAllCaps="false"
+                  android:textAppearance="?android:attr/textAppearanceMedium"
+                  android:text="@string/calculate_button"
+                  android:textStyle="bold"
+                  android:textSize="17sp"
+                  android:onClick="calculate5" />
+              
+              <EditText
+                  android:id="@+id/editSquare1"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/textSquare3"
+                  android:layout_alignLeft="@+id/buttonSquare"
+                  android:layout_alignRight="@+id/buttonSquare"
+                  android:hint="Write number a"
+                  android:ems="10"
+                  android:inputType="numberDecimal" 
+                  android:textSize="15sp"
+                  android:textStyle="italic"
+                  android:textColor="@color/grey"
+                  android:textColorHint="@color/hintcolor"
+                  android:gravity="center" />
+              
+              <TextView
+                  android:id="@+id/textSquare4"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/buttonSquare"
+                  android:layout_centerHorizontal="true"
+                  android:layout_marginTop="6dp"
+                  android:textAppearance="?android:attr/textAppearanceMedium"
+                  android:textColor="@color/holo_green_dark"
+                  android:textIsSelectable="true"
+                  android:textSize="17sp"
+                  android:textStyle="bold"
+                  android:gravity="center"/>
+              
+              <ImageButton
+                android:id="@+id/moreButton6"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/textSquare4"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="7dp"
+                android:layout_marginRight="0dp"
+                android:background="@drawable/button_more_green"
+                android:onClick="moreButtonClick6" />
+
+              <ImageView
+                  android:id="@+id/imageView5"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignBottom="@+id/textSquare3"
+                  android:layout_alignTop="@+id/textSquare1"
+                  android:layout_toLeftOf="@+id/title5"
+                  android:src="@drawable/square" />
+              
+              <Button
+                  android:id="@+id/ShareButton5"
+                  android:layout_width="60dp"
+                  android:layout_height="wrap_content"
+                  android:layout_alignBottom="@+id/buttonSquare"
+                  android:layout_alignTop="@+id/buttonSquare"
+                  android:layout_toRightOf="@+id/buttonSquare"
+                  android:background="@drawable/button_share2"
+                  android:onClick="share5" />
+
+          </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            card_view:cardBackgroundColor="@color/holo_green_dark"
+            card_view:cardElevation="2dp"
+            card_view:cardCornerRadius="2dp"
+            card_view:cardPreventCornerOverlap="false"
+            card_view:cardUseCompatPadding="true"
+            card_view:contentPaddingRight="-2.5dp"
+            card_view:contentPaddingLeft="-2.5dp"
+            card_view:contentPaddingTop="6dp"
+            card_view:contentPaddingBottom="-4dp"
+            android:id="@+id/upBorder6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/upBorder5"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="6dp" >
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            card_view:cardBackgroundColor="@color/white_grey"
+            card_view:cardElevation="0dp"
+            card_view:cardCornerRadius="2dp"
+            card_view:cardPreventCornerOverlap="false"
+            card_view:cardUseCompatPadding="true"
+            card_view:contentPaddingRight="0dp"
+            card_view:contentPaddingLeft="0dp"
+            card_view:contentPaddingTop="0dp"
+            card_view:contentPaddingBottom="2dp"
+             android:id="@+id/downBorder6"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_centerHorizontal="true" >
+
+         <RelativeLayout
+           android:id="@+id/relativeLayout6"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_centerHorizontal="true"
+           android:paddingLeft="7dp"
+           android:paddingRight="7dp"
+           android:background="@color/white_grey"  >
+
+         <TextView
+             android:id="@+id/title6"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentTop="true"
+             android:layout_centerHorizontal="true"
+             android:paddingTop="7dp"
+             android:text="Rectangle"
+             android:textColor="@color/holo_green_dark"
+             android:textSize="20sp"
+             android:textStyle="bold" />
+         
+         <EditText
+                 android:id="@+id/editRectangle1"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignLeft="@+id/editRectangle2"
+                 android:layout_alignRight="@+id/editRectangle2"
+                 android:layout_below="@+id/textRectangle3"
+                 android:ems="10"
+                 android:hint="Write number w"
+                 android:inputType="numberDecimal"
+                 android:textSize="15sp"
+                 android:textStyle="italic"
+                 android:textColor="@color/grey"
+                 android:textColorHint="@color/hintcolor"
+                 android:gravity="center" />
+
+             <EditText
+                 android:id="@+id/editRectangle2"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignLeft="@+id/buttonRectangle"
+                 android:layout_alignRight="@+id/buttonRectangle"
+                 android:layout_below="@+id/editRectangle1"
+                 android:ems="10"
+                 android:hint="Write number h"
+                 android:inputType="numberDecimal"
+                 android:textSize="15sp"
+                 android:textStyle="italic"
+                 android:textColor="@color/grey"
+                 android:textColorHint="@color/hintcolor"
+                 android:gravity="center" />
+
+             <Button
+                 android:id="@+id/buttonRectangle"
+                 android:layout_width="210dp"
+                 android:layout_height="46dp"
+                 android:background="@drawable/button_custom"
+                 android:textColor="@drawable/button_color_text"
+                 android:layout_below="@+id/editRectangle2"
+                 android:layout_centerHorizontal="true"
+                 android:textAllCaps="false"
+                 android:textAppearance="?android:attr/textAppearanceMedium"
+                 android:text="@string/calculate_button"
+                 android:textStyle="bold"
+                 android:textSize="17sp"
+                 android:onClick="calculate6" />
+
+             <TextView
+                 android:id="@+id/textRectangle4"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@+id/buttonRectangle"
+                 android:layout_centerHorizontal="true"
+                 android:layout_marginTop="6dp"
+                 android:textAppearance="?android:attr/textAppearanceMedium"
+                 android:textColor="@color/holo_green_dark"
+                 android:textIsSelectable="true"
+                 android:textStyle="bold"
+                 android:textSize="17sp"
+                 android:gravity="center"/>
+             
+             <ImageButton
+                android:id="@+id/moreButton7"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/textRectangle4"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="7dp"
+                android:layout_marginRight="0dp"
+                android:background="@drawable/button_more_green"
+                android:onClick="moreButtonClick7" />
+
+             <ImageView
+                 android:id="@+id/imageView6"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignBottom="@+id/textRectangle3"
+                 android:layout_alignTop="@+id/textRectangle1"
+                 android:layout_toLeftOf="@+id/textRectangle1"
+                 android:src="@drawable/rectangle1" />
+
+             <TextView
+                 android:id="@+id/textRectangle1"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignRight="@+id/editRectangle1"
+                 android:layout_below="@+id/title6"
+                 android:layout_marginTop="12dp"
+                 android:text="        Area = w × h"
+                 android:textColor="@color/grey"
+                 android:textAppearance="?android:attr/textAppearanceMedium"
+                 android:textStyle="bold"
+                 android:textSize="17sp" />
+
+             <TextView
+                 android:id="@+id/textRectangle2"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignRight="@+id/editRectangle1"
+                 android:layout_below="@+id/textRectangle1"
+                 android:text="w = width"
+                 android:textColor="@color/grey"
+                 android:textAppearance="?android:attr/textAppearanceMedium"
+                 android:textStyle="bold"
+                 android:textSize="17sp" />
+
+             <TextView
+                 android:id="@+id/textRectangle3"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignRight="@+id/editRectangle1"
+                 android:layout_below="@+id/textRectangle2"
+                 android:text="h = height"
+                 android:textColor="@color/grey"
+                 android:textAppearance="?android:attr/textAppearanceMedium"
+                 android:textStyle="bold"
+                 android:textSize="17sp" />
+             
+             <Button
+              android:id="@+id/ShareButton6"
+              android:layout_width="60dp"
+              android:layout_height="wrap_content"
+              android:layout_alignTop="@+id/buttonRectangle"
+              android:layout_alignBottom="@+id/buttonRectangle"
+              android:layout_toRightOf="@+id/buttonRectangle"
+              android:background="@drawable/button_share2"
+              android:onClick="share6"
+              />
+
+          </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            card_view:cardBackgroundColor="@color/holo_green_dark"
+            card_view:cardElevation="2dp"
+            card_view:cardCornerRadius="2dp"
+            card_view:cardPreventCornerOverlap="false"
+            card_view:cardUseCompatPadding="true"
+            card_view:contentPaddingRight="-2.5dp"
+            card_view:contentPaddingLeft="-2.5dp"
+            card_view:contentPaddingTop="6dp"
+            card_view:contentPaddingBottom="-4dp"
+            android:id="@+id/upBorder7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/upBorder6"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="6dp" >
+
+            <android.support.v7.widget.CardView
+             xmlns:card_view="http://schemas.android.com/apk/res-auto"
+             card_view:cardBackgroundColor="@color/white_grey"
+             card_view:cardElevation="0dp"
+             card_view:cardCornerRadius="2dp"
+             card_view:cardPreventCornerOverlap="false"
+             card_view:cardUseCompatPadding="true"
+             card_view:contentPaddingRight="0dp"
+             card_view:contentPaddingLeft="0dp"
+             card_view:contentPaddingTop="0dp"
+             card_view:contentPaddingBottom="2dp"
+             android:id="@+id/downBorder7"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_centerHorizontal="true"  >
+
+         <RelativeLayout
+           android:id="@+id/relativeLayout7"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_centerHorizontal="true"
+           android:paddingLeft="7dp"
+           android:paddingRight="7dp"
+           android:background="@color/white_grey"  >
+
+         <TextView
+             android:id="@+id/title7"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentTop="true"
+             android:layout_centerHorizontal="true"
+             android:paddingTop="7dp"
+             android:text="Parallelogram"
+             android:textColor="@color/holo_green_dark"
+             android:textSize="20sp"
+             android:textStyle="bold" />
+         
+         <EditText
+                 android:id="@+id/editParallelogram1"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignLeft="@+id/editParallelogram2"
+                 android:layout_alignRight="@+id/editParallelogram2"
+                 android:layout_below="@+id/textParallelogram3"
+                 android:ems="10"
+                 android:hint="Write number b"
+                 android:inputType="numberDecimal"
+                 android:textSize="15sp"
+                 android:textStyle="italic"
+                 android:textColor="@color/grey"
+                 android:textColorHint="@color/hintcolor"
+                 android:gravity="center" />
+
+             <EditText
+                 android:id="@+id/editParallelogram2"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignLeft="@+id/buttonParallelogram"
+                 android:layout_alignRight="@+id/buttonParallelogram"
+                 android:layout_below="@+id/editParallelogram1"
+                 android:ems="10"
+                 android:hint="Write number h"
+                 android:inputType="numberDecimal"
+                 android:textSize="15sp"
+                 android:textStyle="italic"
+                 android:textColor="@color/grey"
+                 android:textColorHint="@color/hintcolor"
+                 android:gravity="center" />
+
+             <Button
+                 android:id="@+id/buttonParallelogram"
+                 android:layout_width="210dp"
+                 android:layout_height="46dp"
+                 android:background="@drawable/button_custom"
+                 android:textColor="@drawable/button_color_text"
+                 android:layout_below="@+id/editParallelogram2"
+                 android:layout_centerHorizontal="true"
+                 android:textAllCaps="false"
+                 android:textAppearance="?android:attr/textAppearanceMedium"
+                 android:text="@string/calculate_button"
+                 android:textStyle="bold"
+                 android:textSize="17sp"
+                 android:onClick="calculate7"/>
+
+             <TextView
+                 android:id="@+id/textParallelogram4"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@+id/buttonParallelogram"
+                 android:layout_centerHorizontal="true"
+                 android:layout_marginTop="6dp"
+                 android:textAppearance="?android:attr/textAppearanceMedium"
+                 android:textColor="@color/holo_green_dark"
+                 android:textIsSelectable="true"
+                 android:textStyle="bold"
+                 android:textSize="17sp"
+                 android:gravity="center"/>
+             
+             <ImageButton
+                android:id="@+id/moreButton8"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/textParallelogram4"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="7dp"
+                android:layout_marginRight="0dp"
+                android:background="@drawable/button_more_green"
+                android:onClick="moreButtonClick8" />
+
+             <ImageView
+                 android:id="@+id/imageView7"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignBottom="@+id/textParallelogram3"
+                 android:layout_alignTop="@+id/textParallelogram1"
+                 android:layout_toLeftOf="@+id/textParallelogram3"
+                 android:src="@drawable/parallelogram" />
+
+             <TextView
+                 android:id="@+id/textParallelogram1"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignRight="@+id/editParallelogram1"
+                 android:layout_below="@+id/title7"
+                 android:layout_marginTop="12dp"
+                 android:text="Area = b × h"
+                 android:textColor="@color/grey"
+                 android:textAppearance="?android:attr/textAppearanceMedium"
+                 android:textStyle="bold"
+                 android:textSize="17sp" />
+
+             <TextView
+                 android:id="@+id/textParallelogram2"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignRight="@+id/editParallelogram1"
+                 android:layout_below="@+id/textParallelogram1"
+                 android:text="b = base"
+                 android:textColor="@color/grey"
+                 android:textAppearance="?android:attr/textAppearanceMedium"
+                 android:textStyle="bold"
+                 android:textSize="17sp" />
+
+             <TextView
+                 android:id="@+id/textParallelogram3"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignRight="@+id/editParallelogram1"
+                 android:layout_below="@+id/textParallelogram2"
+                 android:text="h = vertical height"
+                 android:textColor="@color/grey"
+                 android:textAppearance="?android:attr/textAppearanceMedium"
+                 android:textStyle="bold"
+                 android:textSize="17sp" />
+             
+             <Button
+              android:id="@+id/ShareButton7"
+              android:layout_width="60dp"
+              android:layout_height="wrap_content"
+              android:layout_alignTop="@+id/buttonParallelogram"
+              android:layout_alignBottom="@+id/buttonParallelogram"
+              android:layout_toRightOf="@+id/buttonParallelogram"
+              android:background="@drawable/button_share2"
+              android:onClick="share7"
+              />
+
+          </RelativeLayout>
+         </android.support.v7.widget.CardView>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            card_view:cardBackgroundColor="@color/holo_green_dark"
+            card_view:cardElevation="2dp"
+            card_view:cardCornerRadius="2dp"
+            card_view:cardPreventCornerOverlap="false"
+            card_view:cardUseCompatPadding="true"
+            card_view:contentPaddingRight="-2.5dp"
+            card_view:contentPaddingLeft="-2.5dp"
+            card_view:contentPaddingTop="6dp"
+            card_view:contentPaddingBottom="-4dp"
+            android:id="@+id/upBorder8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/upBorder7"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="10dp"  >
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            card_view:cardBackgroundColor="@color/white_grey"
+            card_view:cardElevation="0dp"
+            card_view:cardCornerRadius="2dp"
+            card_view:cardPreventCornerOverlap="false"
+            card_view:cardUseCompatPadding="true"
+            card_view:contentPaddingRight="0dp"
+            card_view:contentPaddingLeft="0dp"
+            card_view:contentPaddingTop="0dp"
+            card_view:contentPaddingBottom="2dp"
+             android:id="@+id/downBorder8"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_centerHorizontal="true">
+         <RelativeLayout
+           android:id="@+id/relativeLayout8"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_centerHorizontal="true"
+           android:paddingLeft="7dp"
+           android:paddingRight="7dp"
+           android:background="@color/white_grey" >
+
+         <TextView
+             android:id="@+id/title8"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentTop="true"
+             android:layout_centerHorizontal="true"
+             android:paddingTop="7dp"
+             android:text="Trapezoid"
+             android:textColor="@color/holo_green_dark"
+             android:textSize="20sp"
+             android:textStyle="bold" />
+         
+         <EditText
+             android:id="@+id/editTrapezoid1"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignLeft="@+id/editTrapezoid2"
+             android:layout_alignRight="@+id/editTrapezoid2"
+             android:layout_below="@+id/textTrapezoid4"
+             android:ems="10"
+             android:hint="Write number a"
+             android:inputType="numberDecimal"
+             android:textColor="@color/grey"
+             android:textColorHint="@color/hintcolor"
+             android:textSize="15sp"
+             android:textStyle="italic"
+             android:gravity="center" />
+
+             <EditText
+                 android:id="@+id/editTrapezoid2"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignLeft="@+id/buttonTrapezoid"
+                 android:layout_alignRight="@+id/buttonTrapezoid"
+                 android:layout_below="@+id/editTrapezoid1"
+                 android:ems="10"
+                 android:hint="Write number b"
+                 android:inputType="numberDecimal"
+                 android:textSize="15sp"
+                 android:textStyle="italic"
+                 android:textColor="@color/grey"
+                 android:textColorHint="@color/hintcolor"
+                 android:gravity="center" />
+             <EditText
+                 android:id="@+id/editTrapezoid3"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignLeft="@+id/buttonTrapezoid"
+                 android:layout_alignRight="@+id/buttonTrapezoid"
+                 android:layout_below="@+id/editTrapezoid2"
+                 android:ems="10"
+                 android:hint="Write number h"
+                 android:inputType="numberDecimal"
+                 android:textSize="15sp"
+                 android:textStyle="italic"
+                 android:textColor="@color/grey"
+                 android:textColorHint="@color/hintcolor"
+                 android:gravity="center" />
+
+             <Button
+                 android:id="@+id/buttonTrapezoid"
+                 android:layout_width="210dp"
+                 android:layout_height="46dp"
+                 android:background="@drawable/button_custom"
+                 android:textColor="@drawable/button_color_text"
+                 android:layout_below="@+id/editTrapezoid3"
+                 android:layout_centerHorizontal="true"
+                 android:textAllCaps="false"
+                 android:textAppearance="?android:attr/textAppearanceMedium"
+                 android:text="@string/calculate_button"
+                 android:textStyle="bold"
+                 android:textSize="17sp"
+                 android:onClick="calculate8"/>
+
+             <TextView
+                 android:id="@+id/textTrapezoid5"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@+id/buttonTrapezoid"
+                 android:layout_centerHorizontal="true"
+                 android:layout_marginTop="6dp"
+                 android:textAppearance="?android:attr/textAppearanceMedium"
+                 android:textColor="@color/holo_green_dark"
+                 android:textIsSelectable="true"
+                 android:textStyle="bold"
+                 android:textSize="17sp"
+                 android:gravity="center"/>
+             
+             <ImageButton
+                android:id="@+id/moreButton9"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/textTrapezoid5"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="7dp"
+                android:layout_marginRight="0dp"
+                android:background="@drawable/button_more_green"
+                android:onClick="moreButtonClick9" />
+
+             <ImageView
+                 android:id="@+id/imageView8"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignBottom="@+id/textTrapezoid3"
+                 android:layout_alignTop="@+id/textTrapezoid1"
+                 android:layout_toLeftOf="@+id/title8"
+                 android:src="@drawable/trapezoid" />
+
+             <TextView
+                 android:id="@+id/textTrapezoid1"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignRight="@+id/editTrapezoid1"
+                 android:layout_below="@+id/title8"
+                 android:layout_marginTop="12dp"
+                 android:text="Area = ½ × (a+b) × h"
+                 android:textAppearance="?android:attr/textAppearanceMedium"
+                 android:textColor="@color/grey"
+                 android:textStyle="bold"
+                 android:textSize="17sp" />
+             
+             <TextView
+                 android:id="@+id/textTrapezoid2"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignRight="@+id/editTrapezoid1"
+                 android:layout_below="@+id/textTrapezoid1"
+                 android:text="a = small base"
+                 android:textAppearance="?android:attr/textAppearanceMedium"
+                 android:textColor="@color/grey"
+                 android:textStyle="bold"
+                 android:textSize="17sp" />
+
+             <TextView
+                 android:id="@+id/textTrapezoid3"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignRight="@+id/editTrapezoid1"
+                 android:layout_below="@+id/textTrapezoid2"
+                 android:text="b = large base"
+                 android:textAppearance="?android:attr/textAppearanceMedium"
+                 android:textColor="@color/grey"
+                 android:textStyle="bold"
+                 android:textSize="17sp" />
+
+             <TextView
+                 android:id="@+id/textTrapezoid4"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignRight="@+id/editTrapezoid1"
+                 android:layout_below="@+id/textTrapezoid3"
+                 android:text="h = vertical height"
+                 android:textAppearance="?android:attr/textAppearanceMedium"
+                 android:textColor="@color/grey"
+                 android:textStyle="bold"
+                 android:textSize="17sp" />
+             
+             <Button
+              android:id="@+id/ShareButton8"
+              android:layout_width="60dp"
+              android:layout_height="wrap_content"
+              android:layout_alignTop="@+id/buttonTrapezoid"
+              android:layout_alignBottom="@+id/buttonTrapezoid"
+              android:layout_toRightOf="@+id/buttonTrapezoid"
+              android:background="@drawable/button_share2"
+              android:onClick="share8"
+              />
+
+          </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        </android.support.v7.widget.CardView>
+        
+    </RelativeLayout>
+</ScrollView>

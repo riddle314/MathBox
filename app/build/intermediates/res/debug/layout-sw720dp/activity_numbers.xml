@@ -1,0 +1,962 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:id="@+id/scrollView1"
+    android:background="@color/lightgrey" 
+    tools:context="com.dimitriskatsikas.mathtools.NumbersActivity"  >
+
+    <LinearLayout
+        android:id="@+id/LinearLayout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="19dp"
+        android:paddingRight="19dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingRight="4dp">
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            card_view:cardBackgroundColor="@color/blue"
+            card_view:cardElevation="2dp"
+            card_view:cardCornerRadius="2dp"
+            card_view:cardPreventCornerOverlap="false"
+            card_view:cardUseCompatPadding="true"
+            card_view:contentPaddingRight="-2.5dp"
+            card_view:contentPaddingLeft="-2.5dp"
+            card_view:contentPaddingTop="6dp"
+           card_view:contentPaddingBottom="-4dp"
+           android:id="@+id/upBorder1"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="10dp" >
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            card_view:cardBackgroundColor="@color/white_grey"
+            card_view:cardElevation="0dp"
+            card_view:cardCornerRadius="2dp"
+            card_view:cardPreventCornerOverlap="false"
+            card_view:cardUseCompatPadding="true"
+            card_view:contentPaddingRight="0dp"
+            card_view:contentPaddingLeft="0dp"
+            card_view:contentPaddingTop="0dp"
+            card_view:contentPaddingBottom="2dp"
+            android:id="@+id/downBorder1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true" >
+
+          <RelativeLayout
+              android:id="@+id/relativeLayout1"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_centerHorizontal="true"
+              android:paddingLeft="7dp"
+              android:paddingRight="7dp"
+              android:background="@color/white_grey">
+
+              <TextView
+                  android:id="@+id/title1"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentTop="true"
+                  android:layout_centerHorizontal="true"
+                  android:layout_marginTop="7dp"
+                  android:text="Mathematical Constants"
+                  android:textColor="@color/blue"
+                  android:textSize="20sp"
+                  android:textStyle="bold" />
+
+              <TextView
+                  android:id="@+id/textView1"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/title1"
+                  android:layout_marginTop="12dp"
+                  android:layout_centerHorizontal="true"
+                  android:text="Archimedes' constant π"
+                  android:textStyle="bold"
+                  android:textColor="@color/grey"
+                  android:textSize="17sp" />
+              
+              <TextView
+                  android:id="@+id/textView2"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/textView1"
+                  android:layout_marginBottom="14dp"
+                  android:layout_marginTop="7dp"
+                  android:layout_centerHorizontal="true"
+                  android:text="3.141592653589793238462643383279502884197169399375105820974944..."
+                  android:textColor="@color/grey"
+                  android:textIsSelectable="true"
+                  android:paddingRight="60dp"
+                  android:textSize="17sp"
+                  android:paddingLeft="8dp" />
+              
+              <Button
+                  android:id="@+id/ShareButton1"
+                  android:layout_width="60dp"
+                  android:layout_height="46dp"
+
+                  android:layout_alignBottom="@+id/textView2"
+                  android:background="@drawable/button_share3"
+                  android:onClick="shareConstant1"
+                  android:layout_alignParentRight="true" />
+              
+              <TextView
+              android:id="@+id/imageView1"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_centerHorizontal="true"
+              android:layout_below="@+id/textView2"
+              android:background="@drawable/line" />
+              
+              <TextView
+                  android:id="@+id/textView3"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/imageView1"
+                  android:layout_centerHorizontal="true"
+                  android:text="Euler's number e"
+                  android:layout_marginTop="10dp"
+                  android:textColor="@color/grey"
+                  android:textStyle="bold"
+                  android:textSize="17sp" />
+              
+              <TextView
+                  android:id="@+id/textView4"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/textView3"
+                  android:layout_centerHorizontal="true"
+                  android:paddingRight="60dp"
+                  android:layout_marginBottom="14dp"
+                  android:layout_marginTop="7dp"
+                  android:text="2.7182818284590452353602874713526624977572470936999595..."
+                  android:textColor="@color/grey"
+                  android:textIsSelectable="true"
+                  android:textSize="17sp"
+                  android:paddingLeft="8dp" />
+
+              <Button
+                  android:id="@+id/ShareButton2"
+                  android:layout_width="60dp"
+                  android:layout_height="46dp"
+                  android:layout_alignBottom="@+id/textView4"
+                  android:layout_alignParentRight="true"
+                  android:background="@drawable/button_share3"
+                  android:onClick="shareConstant2"/>
+              
+              <TextView
+                 android:id="@+id/imageView2"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_centerHorizontal="true"
+                 android:layout_below="@+id/textView4"
+                 android:background="@drawable/line" />
+
+              <TextView
+                  android:id="@+id/textView5"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/imageView2"
+                  android:layout_centerHorizontal="true"
+                  android:text="Pythagoras' constant √2"
+                  android:layout_marginTop="10dp"
+                  android:textColor="@color/grey"
+                  android:textStyle="bold"
+                  android:textSize="17sp" />
+              
+              <TextView
+                  android:id="@+id/textView6"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/textView5"
+                  android:layout_centerHorizontal="true"
+                  android:paddingRight="60dp"
+                  android:layout_marginBottom="14dp"
+                  android:layout_marginTop="7dp"
+                  android:text="1.414213562373095048801688724209698078569671875376948073176679..."
+                  android:textColor="@color/grey"
+                  android:textIsSelectable="true"
+                  android:textSize="17sp"
+                  android:paddingLeft="8dp" />
+
+              <Button
+                  android:id="@+id/ShareButton3"
+                  android:layout_width="60dp"
+                  android:layout_height="46dp"
+                  android:layout_alignBottom="@+id/textView6"
+                  android:layout_alignParentRight="true"
+                  android:background="@drawable/button_share3"
+                  android:onClick="shareConstant3"/>
+              
+              <TextView
+                 android:id="@+id/imageView3"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_centerHorizontal="true"
+                 android:layout_below="@+id/textView6"
+                 android:background="@drawable/line" />
+              
+              <TextView
+                  android:id="@+id/textView7"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/imageView4"
+                  android:layout_centerHorizontal="true"
+                  android:text="The imaginary unit i"
+                  android:layout_marginTop="10dp"
+                  android:textAppearance="?android:attr/textAppearanceMedium"
+                  android:textColor="@color/grey"
+                  android:textStyle="bold"
+                  android:textSize="17sp" />
+              
+              <TextView
+                  android:id="@+id/textView8"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_centerHorizontal="true"
+                  android:layout_below="@+id/textView7"
+                  android:layout_marginTop="7dp"
+                  android:text="i² = −1"
+                  android:textAppearance="?android:attr/textAppearanceMedium"
+                  android:textColor="@color/grey"
+                  android:textIsSelectable="true"
+                  android:textSize="17sp" />
+              <TextView
+                  android:id="@+id/textView9"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_centerHorizontal="true"
+                  android:layout_below="@+id/textView8"
+                  android:layout_marginBottom="10dp"
+                  android:text="i = (0,1) in the Complex plane"
+                  android:textAppearance="?android:attr/textAppearanceMedium"
+                  android:textColor="@color/grey"
+                  android:textIsSelectable="true"
+                  android:textSize="17sp" />
+              
+              <TextView
+                 android:id="@+id/imageView4"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_centerHorizontal="true"
+                 android:layout_below="@+id/textView12"
+                 android:background="@drawable/line" />
+              
+              <TextView
+                  android:id="@+id/textView10"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/imageView3"
+                  android:layout_centerHorizontal="true"
+                  android:layout_marginTop="10dp"
+                  android:text="The golden ratio φ"
+                  android:textAppearance="?android:attr/textAppearanceMedium"
+                  android:textColor="@color/grey"
+                  android:textStyle="bold"
+                  android:textSize="17sp" />
+              
+              <TextView
+                  android:id="@+id/textView11"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_centerHorizontal="true"
+                  android:layout_marginTop="7dp"
+                  android:layout_below="@+id/textView10"
+                  android:text="(1 + √5)/2 ="
+                  android:textAppearance="?android:attr/textAppearanceMedium"
+                  android:textColor="@color/grey"
+                  android:textIsSelectable="true"
+                  android:textSize="17sp" />
+              <TextView
+                  android:id="@+id/textView12"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/textView11"
+                  android:layout_centerHorizontal="true"
+                  android:paddingRight="60dp"
+                  android:layout_marginBottom="14dp"
+                  android:text="1.618033988749894848204586834365638117720309179805762862135448..."
+                  android:textAppearance="?android:attr/textAppearanceMedium"
+                  android:textColor="@color/grey"
+                  android:textIsSelectable="true"
+                  android:textSize="17sp"
+                  android:paddingLeft="8dp" />
+
+              <Button
+                  android:id="@+id/ShareButton4"
+                  android:layout_width="60dp"
+                  android:layout_height="46dp"
+                  android:layout_alignBottom="@+id/textView12"
+                  android:layout_alignParentRight="true"
+                  android:background="@drawable/button_share3"
+                  android:onClick="shareConstant4"/>
+              
+              <ImageButton
+                android:id="@+id/moreButton1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/textView9"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="7dp"
+                android:layout_marginRight="0dp"
+                android:background="@drawable/button_more_blue"
+                android:onClick="moreButtonClick1" />
+             
+              
+          </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        </android.support.v7.widget.CardView>
+
+
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            card_view:cardBackgroundColor="@color/blue"
+            card_view:cardElevation="2dp"
+            card_view:cardCornerRadius="2dp"
+            card_view:cardPreventCornerOverlap="false"
+            card_view:cardUseCompatPadding="true"
+            card_view:contentPaddingRight="-2.5dp"
+            card_view:contentPaddingLeft="-2.5dp"
+            card_view:contentPaddingTop="6dp"
+            card_view:contentPaddingBottom="-4dp"
+            android:id="@+id/upBorder3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp" >
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            card_view:cardBackgroundColor="@color/white_grey"
+            card_view:cardElevation="0dp"
+            card_view:cardCornerRadius="2dp"
+            card_view:cardPreventCornerOverlap="false"
+            card_view:cardUseCompatPadding="true"
+            card_view:contentPaddingRight="0dp"
+            card_view:contentPaddingLeft="0dp"
+            card_view:contentPaddingTop="0dp"
+            card_view:contentPaddingBottom="2dp"
+            android:id="@+id/downBorder3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true" >
+         <RelativeLayout
+           android:id="@+id/relativeLayout3"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_centerHorizontal="true"
+           android:paddingLeft="7dp"
+           android:paddingRight="7dp"
+           android:background="@color/white_grey" >
+              
+             <TextView
+                 android:id="@+id/title3"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentTop="true"
+                 android:layout_centerHorizontal="true"
+                 android:layout_marginTop="7dp"
+                 android:text="Fibonacci Numbers"
+                 android:textColor="@color/blue"
+                 android:textSize="20sp"
+                 android:textStyle="bold" />
+             
+             <TextView
+                 android:id="@+id/textFibonacci1"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@+id/title3"
+                 android:layout_centerHorizontal="true"
+                 android:gravity="center"
+                 android:layout_marginTop="12dp"
+                 android:text="Find the first n Fibonacci numbers:"
+                 android:textColor="@color/grey"
+                 android:textStyle="bold"
+                 android:textSize="17sp" />
+
+             <EditText
+                  android:id="@+id/editFibonacci1"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/textFibonacci1"
+                  android:layout_alignLeft="@+id/buttonFibonacci1"
+                  android:layout_alignRight="@+id/buttonFibonacci1"
+                  android:hint="@string/numbers_editn"
+                  android:ems="10"
+                  android:inputType="number" 
+                  android:textSize="15sp"
+                  android:textStyle="italic"
+                  android:textColor="@color/grey"
+                  android:textColorHint="@color/hintcolor"
+                  android:gravity="center" />
+             <Button
+                  android:id="@+id/buttonFibonacci1"
+                  android:layout_width="210dp"
+                  android:layout_height="46dp"
+                  android:background="@drawable/button_custom"
+                  android:textColor="@drawable/button_color_text"
+                  android:layout_below="@+id/editFibonacci1"
+                  android:layout_centerHorizontal="true"
+                  android:text="@string/calculate_button"
+                  android:textAllCaps="false"
+                  android:textAppearance="?android:attr/textAppearanceMedium"
+                  android:textStyle="bold"
+                  android:onClick="calculateFibonacci"
+                 android:textSize="17sp" />
+              <TextView
+                  android:id="@+id/textFibonacci2"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/buttonFibonacci1"
+                  android:layout_centerHorizontal="true"
+                  android:layout_marginTop="6dp"
+                  android:textAppearance="?android:attr/textAppearanceMedium"
+                  android:textColor="@color/blue"
+                  android:textIsSelectable="true"
+                  android:gravity="center"
+                  android:textStyle="bold"
+                  android:textSize="17sp" />
+              
+              <Button
+                android:id="@+id/ShareFibonacci1"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/buttonFibonacci1"
+                android:layout_alignBottom="@+id/buttonFibonacci1"
+                android:layout_toRightOf="@+id/buttonFibonacci1"
+                android:background="@drawable/button_share3"
+                android:onClick="shareFibonacci"
+                />
+             
+              <ImageButton
+                android:id="@+id/moreButton3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/textFibonacci2"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="7dp"
+                android:layout_marginRight="0dp"
+                android:background="@drawable/button_more_blue"
+                android:onClick="moreButtonClick3" />
+      </RelativeLayout>
+      </android.support.v7.widget.CardView>
+      </android.support.v7.widget.CardView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="4dp">
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            card_view:cardBackgroundColor="@color/blue"
+            card_view:cardElevation="2dp"
+            card_view:cardCornerRadius="2dp"
+            card_view:cardPreventCornerOverlap="false"
+            card_view:cardUseCompatPadding="true"
+            card_view:contentPaddingRight="-2.5dp"
+            card_view:contentPaddingLeft="-2.5dp"
+            card_view:contentPaddingTop="6dp"
+            card_view:contentPaddingBottom="-4dp"
+            android:id="@+id/upBorder2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" >
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                card_view:cardBackgroundColor="@color/white_grey"
+                card_view:cardElevation="0dp"
+                card_view:cardCornerRadius="2dp"
+                card_view:cardPreventCornerOverlap="false"
+                card_view:cardUseCompatPadding="true"
+                card_view:contentPaddingRight="0dp"
+                card_view:contentPaddingLeft="0dp"
+                card_view:contentPaddingTop="0dp"
+                card_view:contentPaddingBottom="2dp"
+                android:id="@+id/downBorder2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true" >
+                <RelativeLayout
+                    android:id="@+id/relativeLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"
+                    android:background="@color/white_grey" >
+
+                    <TextView
+                        android:id="@+id/title2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="7dp"
+                        android:text="Prime Numbers"
+                        android:textColor="@color/blue"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textPrime1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/title2"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:layout_marginTop="12dp"
+                        android:text="Check if a number is a prime number:"
+                        android:textColor="@color/grey"
+                        android:textStyle="bold"
+                        android:textSize="17sp" />
+
+                    <EditText
+                        android:id="@+id/editPrime1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textPrime1"
+                        android:layout_alignLeft="@+id/buttonPrime1"
+                        android:layout_alignRight="@+id/buttonPrime1"
+                        android:hint="@string/numbers_edit"
+                        android:ems="10"
+                        android:inputType="number"
+                        android:textSize="15sp"
+                        android:textStyle="italic"
+                        android:textColor="@color/grey"
+                        android:textColorHint="@color/hintcolor"
+                        android:gravity="center" />
+
+                    <Button
+                        android:id="@+id/buttonPrime1"
+                        android:layout_width="210dp"
+                        android:layout_height="46dp"
+                        android:background="@drawable/button_custom"
+                        android:textColor="@drawable/button_color_text"
+                        android:layout_below="@+id/editPrime1"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/check_button"
+                        android:textAllCaps="false"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textStyle="bold"
+                        android:onClick="calculatePrime1"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/textPrime2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/buttonPrime1"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="18dp"
+                        android:layout_marginTop="6dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/blue"
+                        android:textIsSelectable="true"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textSize="17sp" />
+
+                    <Button
+                        android:id="@+id/SharePrime1"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/buttonPrime1"
+                        android:layout_alignBottom="@+id/buttonPrime1"
+                        android:layout_toRightOf="@+id/buttonPrime1"
+                        android:background="@drawable/button_share3"
+                        android:onClick="sharePrime1"/>
+
+                    <TextView
+                        android:id="@+id/imagePrime1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/textPrime2"
+                        android:background="@drawable/line" />
+
+                    <TextView
+                        android:id="@+id/textPrime3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/imagePrime1"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:text="Find all prime numbers up to the number n:"
+                        android:textColor="@color/grey"
+                        android:textStyle="bold"
+                        android:textSize="17sp" />
+
+                    <EditText
+                        android:id="@+id/editPrime2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textPrime3"
+                        android:layout_alignLeft="@+id/buttonPrime2"
+                        android:layout_alignRight="@+id/buttonPrime2"
+                        android:hint="@string/numbers_editn"
+                        android:ems="10"
+                        android:inputType="number"
+                        android:textSize="15sp"
+                        android:textStyle="italic"
+                        android:textColor="@color/grey"
+                        android:textColorHint="@color/hintcolor"
+                        android:gravity="center" />
+                    <Button
+                        android:id="@+id/buttonPrime2"
+                        android:layout_width="210dp"
+                        android:layout_height="46dp"
+                        android:background="@drawable/button_custom"
+                        android:textColor="@drawable/button_color_text"
+                        android:layout_below="@+id/editPrime2"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/calculate_button"
+                        android:textAllCaps="false"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textStyle="bold"
+                        android:onClick="calculatePrime2"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/textPrime4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/buttonPrime2"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="6dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/blue"
+                        android:textIsSelectable="true"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textSize="17sp" />
+
+                    <Button
+                        android:id="@+id/SharePrime2"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/buttonPrime2"
+                        android:layout_alignBottom="@+id/buttonPrime2"
+                        android:layout_toRightOf="@+id/buttonPrime2"
+                        android:background="@drawable/button_share3"
+                        android:onClick="sharePrime2"/>
+
+                    <ImageButton
+                        android:id="@+id/moreButton2"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/textPrime4"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginRight="0dp"
+                        android:background="@drawable/button_more_blue"
+                        android:onClick="moreButtonClick2" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            card_view:cardBackgroundColor="@color/blue"
+            card_view:cardElevation="2dp"
+            card_view:cardCornerRadius="2dp"
+            card_view:cardPreventCornerOverlap="false"
+            card_view:cardUseCompatPadding="true"
+            card_view:contentPaddingRight="-2.5dp"
+            card_view:contentPaddingLeft="-2.5dp"
+            card_view:contentPaddingTop="6dp"
+            card_view:contentPaddingBottom="-4dp"
+            android:id="@+id/upBorder4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="10dp">
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                card_view:cardBackgroundColor="@color/white_grey"
+                card_view:cardElevation="0dp"
+                card_view:cardCornerRadius="2dp"
+                card_view:cardPreventCornerOverlap="false"
+                card_view:cardUseCompatPadding="true"
+                card_view:contentPaddingRight="0dp"
+                card_view:contentPaddingLeft="0dp"
+                card_view:contentPaddingTop="0dp"
+                card_view:contentPaddingBottom="2dp"
+                android:id="@+id/downBorder4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true" >
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/white_grey"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp" >
+
+                    <TextView
+                        android:id="@+id/title4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="7dp"
+                        android:text="Convert radians / degrees"
+                        android:textColor="@color/blue"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/titleConvert1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/title4"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="12dp"
+                        android:text="Radians to Degrees"
+                        android:textSize="20sp"
+                        android:textColor="@color/grey"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textConvert1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/titleConvert1"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="7dp"
+                        android:text="Degrees = (180/π) × θ"
+                        android:textColor="@color/grey"
+                        android:textStyle="bold"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/textConvert2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textConvert1"
+                        android:layout_centerHorizontal="true"
+                        android:text="θ = angle in radians"
+                        android:textColor="@color/grey"
+                        android:textStyle="bold"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/textConvert3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textConvert2"
+                        android:layout_centerHorizontal="true"
+                        android:text="π = 3.14159..."
+                        android:textColor="@color/grey"
+                        android:textStyle="bold"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/titleConvert2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/imageView9"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:text="Degrees to Radians"
+                        android:textColor="@color/grey"
+                        android:textStyle="bold"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textConvert4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/titleConvert2"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="7dp"
+                        android:text="Radians = (π/180) × φ"
+                        android:textColor="@color/grey"
+                        android:textStyle="bold"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/textConvert5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textConvert4"
+                        android:layout_centerHorizontal="true"
+                        android:text="φ = angle in degrees"
+                        android:textColor="@color/grey"
+                        android:textStyle="bold"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/textConvert8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textConvert5"
+                        android:layout_centerHorizontal="true"
+                        android:text="π = 3.14159..."
+                        android:textColor="@color/grey"
+                        android:textStyle="bold"
+                        android:textSize="17sp" />
+
+                    <EditText
+                        android:id="@+id/editConvert1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/buttonConvert1"
+                        android:layout_alignRight="@+id/buttonConvert1"
+                        android:layout_below="@+id/textConvert3"
+                        android:ems="10"
+                        android:hint="Write angle θ in radians"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/grey"
+                        android:textColorHint="@color/hintcolor"
+                        android:textSize="15sp"
+                        android:textStyle="italic"
+                        android:gravity="center" />
+
+                    <Button
+                        android:id="@+id/buttonConvert1"
+                        android:layout_width="210dp"
+                        android:layout_height="46dp"
+                        android:layout_below="@+id/editConvert1"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/button_custom"
+                        android:text="@string/convert_button"
+                        android:textAllCaps="false"
+                        android:textColor="@drawable/button_color_text"
+                        android:textStyle="bold"
+                        android:onClick="calculateConvert1"
+                        android:textSize="17sp" />
+
+                    <Button
+                        android:id="@+id/ShareConvert1"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/buttonConvert1"
+                        android:layout_alignTop="@+id/buttonConvert1"
+                        android:layout_toRightOf="@+id/buttonConvert1"
+                        android:background="@drawable/button_share3"
+                        android:onClick="shareConvert1"/>
+
+                    <TextView
+                        android:id="@+id/resultConvert1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/buttonConvert1"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="18dp"
+                        android:layout_marginTop="6dp"
+                        android:textColor="@color/blue"
+                        android:text=""
+                        android:gravity="center"
+                        android:textIsSelectable="true"
+                        android:textStyle="bold"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/imageView9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/resultConvert1"
+                        android:background="@drawable/line" />
+
+                    <EditText
+                        android:id="@+id/editConvert2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/buttonConvert2"
+                        android:layout_alignRight="@+id/buttonConvert2"
+                        android:layout_below="@+id/textConvert8"
+                        android:ems="10"
+                        android:hint="Write angle φ in degrees"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/grey"
+                        android:textColorHint="@color/hintcolor"
+                        android:textSize="15sp"
+                        android:textStyle="italic"
+                        android:gravity="center" />
+
+                    <Button
+                        android:id="@+id/buttonConvert2"
+                        android:layout_width="210dp"
+                        android:layout_height="46dp"
+                        android:layout_below="@+id/editConvert2"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/button_custom"
+                        android:text="@string/convert_button"
+                        android:textAllCaps="false"
+                        android:textColor="@drawable/button_color_text"
+                        android:textStyle="bold"
+                        android:onClick="calculateConvert2"
+                        android:textSize="17sp" />
+
+                    <Button
+                        android:id="@+id/ShareConvert2"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/buttonConvert2"
+                        android:layout_alignTop="@+id/buttonConvert2"
+                        android:layout_toRightOf="@+id/buttonConvert2"
+                        android:background="@drawable/button_share3"
+                        android:onClick="shareConvert2"/>
+
+                    <TextView
+                        android:id="@+id/resultConvert2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/buttonConvert2"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="6dp"
+                        android:textColor="@color/blue"
+                        android:text=""
+                        android:gravity="center"
+                        android:textIsSelectable="true"
+                        android:textStyle="bold"
+                        android:textSize="17sp" />
+
+                    <ImageButton
+                        android:id="@+id/moreButton4"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/resultConvert2"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginRight="0dp"
+                        android:background="@drawable/button_more_blue"
+                        android:onClick="moreButtonClick4" />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView><!-- From: file:/C:/Users/Dimitris/AndroidstudioProjects/MathTools/app/src/main/res/layout-sw720dp/activity_numbers.xml -->

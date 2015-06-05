@@ -1,0 +1,54 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/lightgrey"
+    tools:context="com.dimitriskatsikas.mathtools.VolumesSurfaces" >
+ 
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="214dp"
+            android:layout_height="69dp"
+            android:background="@drawable/button_geometric_2d"
+            android:textColor="@drawable/button_color_text2"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/shapes2D"
+            android:onClick="TwoDimensionalClick"
+            android:textSize="19dp"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:paddingLeft="12dp"
+            android:paddingRight="35dp"
+            android:gravity="left|center"/>
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="214dp"
+            android:layout_height="69dp"
+            android:background="@drawable/button_geometric_3d"
+            android:textColor="@drawable/button_color_text2"
+            android:layout_below="@+id/button1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="@string/shapes3D"
+            android:onClick="ThreeDimensionalClick"
+            android:textSize="19dp"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:paddingLeft="12dp"
+            android:paddingRight="35dp"
+            android:gravity="left|center"/>
+        
+    </RelativeLayout>
+</ScrollView>
+<!-- From: file:/C:/Users/Dimitris/AndroidstudioProjects/MathTools/app/src/main/res/layout/activity_volumes_surfaces.xml -->

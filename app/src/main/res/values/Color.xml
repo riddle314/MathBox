@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+ <color name="white">#ffffff</color>
+ <color name="white_grey">#fffafafa</color>
+ <color name="white_grey2">#f7f7f7</color>
+ <color name="white_grey3">#f1f1f1</color>
+ <color name="lightgrey">#ffe9e9e9</color>
+ <color name="beforelightgrey">#eeeeee</color>
+ <color name="lightgrey2">#f2f2f2</color>
+ <color name="lightgrey3">#e6e6e6</color>
+ <color name="colorControlNormal">#ffcdcdcd</color>
+ <color name="hintcolor">#ffa5a5a5</color>
+ <color name="grey">#707070</color>
+ <color name="dark_grey">#636363</color>
+ <color name="shadow">#e4e4e4</color>
+ <color name="shadow2">#e0e0e0</color>
+ <color name="shadow3">#dddddd</color>
+ <color name="button_grey">#c7c7c7</color>
+ <color name="button_blue">#77c5e1</color>
+ <color name="holo_blue_dark">#ff0099cc</color>
+ <color name="blue">#ff009ac9</color>
+ <color name="blue_notification_bar">#ff0084ae</color>
+ <color name="holo_green_dark">#ff669900</color>
+ <color name="green_notification_bar">#ff4d7e00</color>
+ <color name="holo_red_dark">#ffcc0000</color>
+ <color name="orange_dark">#ed7e24</color>
+ <color name="orange_notification_bar">#ffd26a24</color>
+ <color name="holo_orange_dark">#ffff8800</color>
+ <color name="holo_purple">#ffaa66cc</color>
+ <color name="title_black">#373737</color>
+ <color name="bar_black">#2a2a2a</color>
+ <color name="black_notification_bar">#ff0f0f0f</color>
+ <color name="black">#000000</color>
+ 
+</resources>
